@@ -1,0 +1,240 @@
+.job-detail
+	padding: 50px 0
+	@media screen and(max-width:1441px)
+		padding: 40px 0
+	@media screen and(max-width:1025px)
+		padding: 30px 0
+	article
+		h2
+			font-size: 26px
+			color: $yellow
+			font-weight: 600
+			line-height: 35px
+			margin-bottom: 20px
+		h3
+			font-size: 18px
+			color: #333333
+			font-weight: 700
+			margin-bottom: 10px
+			text-transform: uppercase
+		ul
+			margin-bottom: 30px
+			list-style-type: none
+			padding: 0
+			margin: 0 0 30px 0
+			li
+				font-size: 16px
+				color: #333333
+				line-height: 25px
+				margin: 4px 0
+				&:before
+					display: inline-block
+					flex: 0 0 7px
+					margin-right: 10px
+					border-radius: 50%
+					background: #999999
+					width: 7px
+					height: 7px
+					content: ""
+		p
+			strong
+				display: block
+				color: #666666
+				font-size: 16px
+				font-weight: 700
+				margin-bottom: 10px
+	.job-apply-button-wrapper 
+		.apply-button
+			display: inline-block
+			a
+				padding: 10px 50px
+				background: #41535d
+				font-size: 16px
+				color: #ffffff
+				font-weight: 400
+				display: flex
+				justify-content: center
+				align-items: center
+				text-transform: uppercase
+				text-decoration: none
+				vertical-align: middle
+				transform: perspective(1px) translateZ(0)
+				box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+				position: relative
+				transition-property: color
+				transition-duration: 0.3s
+				&:hover
+					color: #ffffff
+					&:before
+						transform: scaleX(1)
+				&:before
+					content: ""
+					position: absolute
+					z-index: -1
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					background: #2098D1
+					transform: scaleX(0)
+					transform-origin: 0 50%
+					transition-property: transform
+					transition-duration: 0.3s
+					transition-timing-function: ease-out
+.job-requirement-wrapper
+	flex: 0 0 100%
+	max-width: 100%
+	width: 100%
+	display: flex
+	flex-wrap: wrap
+	.job-requirement-item
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		flex-wrap: wrap
+		flex: 0 0 50%
+		&:nth-child(1)
+			.icon
+				&:before
+					content: '\f4f9'
+		&:nth-child(2)
+			.icon
+				&:before
+					content: '\f279'
+		&:nth-child(3)
+			.icon
+				&:before
+					content: '\f306'
+		&:nth-child(4)
+			.icon
+				&:before
+					content: '\f0ed'
+		&:nth-child(5)
+			.icon
+				&:before
+					content: '\f004'
+		&:nth-child(6)
+			.icon
+				&:before
+					content: '\f0d6'
+		&:nth-child(7)
+			.icon
+				&:before
+					content: '\f474'
+		&:nth-child(8)
+			.icon
+				&:before
+					content: '\f0eb'
+		.icon
+			flex: 0 0 7%
+			width: 20px
+			height: 32px
+			position: relative
+			&:before
+				font-family: 'Material Design Icons'
+				font-size: 15px
+				position: absolute
+				top: 3px
+				left: 50%
+				color: #999999
+				font-size: 15px
+				transform: translateX(-50%)
+		.title
+			flex: 0 0 45%
+			*
+				font-size: 14px
+				font-weight: 600
+				color: #333333
+				text
+		.caption
+			flex: 0 0 45%
+			*
+				font-size: 14px
+				color: #333333
+	@media screen and(max-width:1200px)
+		.job-requirement-item
+			.icon
+				flex: 0 0 10%
+			.title
+				flex: 0 0 35%
+			.caption
+				flex: 0 0 55%
+	@media screen and(max-width:768px)
+		.job-requirement-item
+			flex:  0 0 100%
+			&:last-child
+				margin-bottom: 16px
+	@media screen and(max-width:576px)
+		.job-requirement-item
+			margin: 8px 0
+			.caption
+				flex: 0 0 100%
+				padding-left: 50px
+
+.other-vacancy-wrapper
+	overflow: hidden
+	.bg-wrapper-job
+		background: #f5f5f5
+	.article-title-job-yl
+		background: $yellow
+		display: inline-block
+		position: relative
+		height: 50px
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			bottom: -1px
+			width: 100vw
+			height: 1px
+			background: $yellow
+		&:after
+			content: ''
+			z-index: -1
+			display: block
+			position: absolute
+			left: 13px
+			bottom: 0
+			width: 100%
+			height: 50px
+			background: $yellow
+			transform: skew(30deg, 0deg)
+		h2
+			padding: 16px 
+			font-size: 18px
+			color: #ffffff
+			text-transform: uppercase
+			font-weight: 700
+			line-height: 24px
+	.other-vacancy
+		display: flex
+		justify-content: center
+		align-items: flex-start
+		margin: 0 40px
+		padding: 16px 0
+		flex-direction: column
+		&:not(:last-child)
+			border-bottom: 1px solid #e1e1e1
+		h3
+			*
+				font-size: 16px
+				font-weight: 600
+				color: #333333
+		time
+			font-size: 14px
+			color: #666666
+	@media screen and(max-width:1441px)
+		.other-vacancy
+			margin: 0 20px
+	@media screen and(max-width:1200px)
+		.article-title-job-yl
+			height: 40px
+			h2
+				padding: 10px  0 10px 16px
+				font-size: 14px
+
+	@media screen and(max-width:1025px)
+		.article-title-job-yl
+			flex:  0 0 100%
+			max-width: 100%

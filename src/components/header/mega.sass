@@ -1,0 +1,283 @@
+.product-child-mobile-toggle-mega
+	display: none
+.product-status-content-mega
+	padding-top: 30px
+.product-child-tab-mega
+	display: flex
+	justify-content: flex-start
+	margin: 0 -10px 20px -10px
+	flex-wrap: wrap
+	flex: 0 0 100%
+	align-items: center
+	.product-child-tab-item-mega
+		flex:  0 0 calc( 8.33% - 20px)
+		max-width: calc( 8.33% - 20px)
+		text-align: center
+		user-select: none
+		cursor: pointer
+		margin: 0 10px
+		transition: .4s ease-in-out all
+		font-size: 13px
+		font-weight: 400
+		margin-bottom: 10px
+		text-align: center
+		&:hover, &.active
+			figure
+				background: #41535d
+				color: #fff
+	
+		@media screen and(max-width:1350px)
+			flex:  0 0 calc( 16.66% - 20px)
+			max-width: calc( 16.66% - 20px)
+		@media screen and(max-width:768px)
+			flex:  0 0 100%
+			max-width: 100%
+		@media screen and(max-width:576px)
+			margin: 5px 0 
+			border-radius: 0
+		img
+			transition: .4s ease-in-out all
+		figure
+			border-radius: 5px
+			background: #2b383f
+			min-height: 120px
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			flex-direction: column
+			padding: 10px 0
+
+			@media screen and(max-width:768px)
+				min-height: 100%
+			figcaption
+				padding-top: 5px
+				p
+					font-size: 11px
+					color: #d5d7d9
+					font-weight: 400
+			.ic
+				height: 60px
+				width: auto
+				img
+					width: 100%
+					height: 100%
+					object-fit: contain
+					filter: brightness(0) invert(1)
+		&.active, &:hover
+			figure
+				background: #ffaa00
+			.ic
+				img
+					filter: brightness(0) invert(1)
+.product-status-tab-mega
+	display: flex
+	justify-content: flex-start
+	margin: 0 -10px 20px -10px
+	flex-wrap: wrap
+	flex: 0 0 100%
+	align-items: center
+	h2
+		margin-bottom: 30px
+	.product-child-tab-item-mega
+		flex:  0 0 calc( 12.5% - 20px)
+		max-width: calc( 12.5% - 20px)
+		text-align: center
+		user-select: none
+		cursor: pointer
+		margin: 0 10px
+		transition: .4s ease-in-out all
+		font-size: 13px
+		font-weight: 400
+		margin-bottom: 10px
+		text-align: center
+		&:hover, &.active
+			figure
+				background: #41535d
+				color: #fff
+	
+		@media screen and(max-width:1350px)
+			flex:  0 0 calc( 16.66% - 20px)
+			max-width: calc( 16.66% - 20px)
+		@media screen and(max-width:768px)
+			flex:  0 0 100%
+			max-width: 100%
+		@media screen and(max-width:576px)
+			margin: 5px 0 
+			border-radius: 0
+		img
+			transition: .4s ease-in-out all
+		figure
+			border-radius: 5px
+			background: #2b383f
+			min-height: 80px
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			flex-direction: column
+			padding:  0
+
+			@media screen and(max-width:768px)
+				min-height: 100%
+			figcaption
+				padding-top: 5px
+				p
+					font-size: 11px
+					color: #d5d7d9
+					font-weight: 400
+			.ic
+				height: 80px
+				width: auto
+				padding: 0 20px
+				img
+					width: 100%
+					height: 100%
+					object-fit: contain
+					filter: brightness(0) invert(1)
+		&.active, &:hover
+			figure
+				background: #ffaa00
+			.ic
+				img
+					filter: brightness(0) invert(1)
+
+@media(max-width: 1200px)
+	.product-child-tab-mega
+		flex-wrap: wrap
+	.product-child-tab-item-mega
+		flex: 0 0 calc(16.666667% - 20px)
+
+@media(max-width: 768px)
+	.product-child-mobile-toggle-mega
+		display: block
+		padding: 10px
+		background: #41535d
+		color: #fff
+		position: relative
+		&:after
+			content: '\f140'
+			font: normal normal normal 24px/1 Material Design Icons
+			position: absolute
+			font-size: 15px
+			transform: translateY(-50%)
+			top: 50%
+			right: 10px
+	.product-child-tab-mega
+		display: block
+		margin: 0
+		max-height: 300px
+		overflow-y: auto
+		.product-child-tab-item-mega
+			margin: 0
+			flex: initial
+			width: 100%
+			font-weight: 500
+			.ic
+				display: none
+	.product-status-tab-mega
+		display: block
+		margin: 0
+		max-height: 300px
+		overflow-y: auto
+		.product-child-tab-item-mega
+			margin: 0
+			flex: initial
+			width: 100%
+			font-weight: 500
+			.ic
+				display: block
+		@media screen and(max-width:768px)
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			flex-wrap: wrap
+			flex: 0 0 100%
+			.product-child-tab-item-mega
+				max-width: 50%
+				flex: 0 0 50%
+
+.nav-mega-menu-wrapper
+	padding: 30px 0
+	position: absolute
+	left: 0
+	top: 60px
+	width: 100vw
+	background: #33424a
+	overflow-y: scroll
+	z-index: -1
+	opacity: 0
+	pointer-events: none
+	transition: opacity .3s ease-in-out
+	.menu-brand
+	.product-child-mobile-toggle-mega
+		display: none
+		width: 100%
+	@media screen and(max-width:768px)
+		.product-child-mobile-toggle-mega
+			display: block
+		.product-child-tab-mega
+			display: none
+		.menu-brand
+			.product-child-tab-mega
+				display: block
+				margin-top: 20px
+	@media screen and(max-width:1200px)
+		top: 55px
+	&.active
+		z-index: 13
+		opacity: 1
+		height: calc( 100vh - 60px)
+		pointer-events: auto
+		.exit-mega-wrapper
+			z-index: 14
+			pointer-events: auto
+				
+	.container
+		position: relative
+	.exit-mega-wrapper
+		cursor: pointer
+		position: absolute
+		top: 0
+		right: 30px
+		z-index: -1
+		display: flex
+		pointer-events: none
+		justify-content: center
+		align-items: center
+		@media screen and(max-width:576px)
+			top: -36px
+			right: 20px
+		em
+			font-size: 30px
+			color: #ffffff
+	.product-status-content-item-mega
+		display: block 
+	h2
+		margin-top: 16px
+		font-size: 24px
+		width: 100%
+		font-weight: 600
+		z-index: 10
+		text-transform: uppercase
+		position: relative
+		display: block
+		@media screen and(max-width:576px)
+			margin-bottom: 20px
+			font-size: 18px
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			bottom: -8px
+			width: 90px
+			height: 3px
+			background: $yellow
+	h3
+		display: block
+		width: 100%
+		font-size: 16px
+		font-weight: 600
+		text-transform: uppercase
+		margin: 16px 0
+		@media screen and(max-width:576px)
+			display: none

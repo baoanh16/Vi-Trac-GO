@@ -1,0 +1,206 @@
+.vt-zone-navigation
+	position: relative
+	&:after
+		content: ''
+		width: 0
+		height: 0 
+		border-left: 40px solid transparent
+		border-right: 40px solid transparent
+		border-top: 40px solid #fff
+		position: absolute
+		top: 100%
+		left: 50%
+		transform: translateX(-50%)
+	.vt-title
+		border-bottom: 1px solid #f1f1f1
+		padding-bottom: 10px
+	.navigation-wrapper
+		.list-item
+			display: flex
+			margin: 0 -10px
+			.item
+				padding: 0 10px
+				flex-grow: 1
+				flex-basis: 0
+				&.active
+					figure
+						background: #41535d
+						.ic
+							img
+								filter: brightness(0) invert(1)
+						figcaption
+							*
+								color: #ffffff
+							span
+								background: #283941
+				figure
+					height: 160px
+					background: #e6e6e6
+					transition: .4s ease-in-out all
+					display: flex
+					justify-content: flex-start
+					flex-direction: column
+					align-items: center
+					.ic
+						display: flex
+						justify-content: center
+						align-items: center
+						padding: 10px
+						img
+							transition: .4s ease-in-out all
+					figcaption
+						width: 100%
+						font-size: 13px
+						text-align: center
+						display: flex
+						justify-content: space-between
+						height: 100%
+						align-items: center
+						flex-direction: column
+						p
+							font-size: 12px
+							padding: 10px 5px
+							padding-top: 0
+							text-align: center
+						span
+							width: 100%
+							text-align: center
+							display: block
+							padding: 5px
+							background: #41535d
+							color: #fff
+					&:hover
+						background: #41535d
+						color: #fff
+						.ic
+							img
+								filter: brightness(0) invert(1)
+	@media(max-width: 1200px)
+		.navigation-wrapper
+			.list-item
+				flex-wrap: wrap
+				.item
+					flex: 0 0 16.66666%
+					margin-bottom: 10px
+	@media(max-width: 768px)
+		.navigation-wrapper
+			.list-item
+				display: none
+				max-height: 200px
+				margin: 0
+				overflow-y: auto
+				.item
+					padding: 0
+					margin-bottom: 0
+					figure
+						figcaption
+							display: flex
+							p
+								padding: 10px
+							span
+								display: none
+		.toggle-mobile
+			display: block
+			padding: 10px
+			background: #41535d
+			color: #fff
+			position: relative
+			&:after
+				content: '\f140'
+				font: normal normal normal 24px/1 Material Design Icons
+				position: absolute
+				font-size: 15px
+				transform: translateY(-50%)
+				top: 50%
+				right: 10px
+	@media(max-width: 767.8px)
+		.navigation-wrapper
+			.list-item
+				.item
+					figure
+						height: 100%
+						.ic
+							display: none
+	@media(min-width: 768px)
+		.toggle-mobile
+			display: none
+		.navigation-wrapper
+			.list-item
+				display: flex!important
+				height: 100%!important
+				max-height: initial
+.product-order
+	display: flex
+	margin: 0 -10px
+	margin-top: 30px
+	.product-order-item
+		padding: 0 10px
+	select
+		width: 160px
+		padding: 5px 20px
+		border: 1px solid #344650
+		border-radius: 5px
+.vt-product-list
+	padding: 50px 0
+	background: #f8f8f8
+	@media(min-width: 1025px)
+		padding: 80px 0
+	.product-table
+		max-width: 100%
+		overflow-x: auto
+		box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1)
+	table
+		width: 100%
+		tr
+			td
+				text-align: center
+				border-right: 1px solid #d9dddf
+				padding: 20px
+				font-weight: 600
+				&:first-child
+					text-align: left
+					width: 30%
+
+				&:last-child
+					border-right: 0
+		thead
+			tr
+				&:first-child
+					td
+						background: #41535d
+						color: #fff
+						// font-size: 18px
+						text-transform: uppercase
+						@media(min-width: 1025px)
+							font-size: 18px
+				&:last-child
+					background: #e2e8ec
+		tbody
+			tr
+				&:nth-child(odd)
+					background: #fff
+				&:nth-child(event)
+					background: #f3f3f3
+				td
+					text-transform: uppercase
+					font-weight: 600
+					text-align: center
+				.product-item
+					figure
+						display: flex
+						align-items: center
+						.image
+							height: 130px
+							width: auto
+							max-width: 180px
+							img
+								width: 100%
+								height: 100%
+								object-fit: contain
+						figcaption
+							flex: 0 0 50%
+							padding: 20px 0 20px 20px
+							h5
+								text-transform: initial
+								font-weight: 600
+								font-size: 15px

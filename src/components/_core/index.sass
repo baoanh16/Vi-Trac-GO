@@ -1,0 +1,345 @@
+body, html
+	font-family: 'Montserrat', sans-serif
+	font-size: 14px
+	font-weight: 500
+	color: #333333
+a
+	&:hover
+		color: inherit
+body
+	
+	&.is-hidden
+		overflow: hidden
+main
+	overflow: hidden
+	padding-top: 60px
+	@media(min-width: 1025px)
+		padding-top: 55px
+.vt-title
+	margin-bottom: 15px
+	text-align: center
+	text-transform: uppercase
+	color: #ffaa00
+	font-weight: 600
+	&.text-left
+		text-align: left
+	@media(min-width: 1025px)
+		font-size: 32px
+		margin-bottom: 20px
+.vt-section
+	padding: 30px 0
+	@media(min-width: 1025px)
+		padding: 50px 0
+.vt-button
+	margin-top: 30px
+	text-align: center
+	a
+		padding: 8px 50px
+		display: inline-block
+		border: 2px solid #ffaa00
+		transition: .4s ease-in-out all
+		&:hover
+			background: #ffaa00
+img
+	max-width: 100%
+.upper-case
+	text-transform: uppercase
+	margin-top: 20px
+.dash-grey
+	background: #eeeeee
+	width: 100%
+	height: 1px
+	border: none
+	margin-bottom: 24px
+.dash-green
+	background: #48555c
+	width: 100%
+	height: 1px
+	border: none
+	margin-bottom: 24px
+	
+//Declare section title
+.article-title-yl-start-upper
+	padding-top: 50px
+	*
+		text-align: left
+		text-transform: uppercase
+		font-size: 36px
+		color: #ffaa00
+		font-weight: 600
+		line-height: 45px
+	@media screen and(max-width:1441px)
+		padding-top: 40px
+		*
+			font-size: 32px
+			line-height: 40px
+	@media screen and(max-width:1025px)
+		padding-top: 40px
+	@media screen and(max-width:768px)
+		*
+			font-size: 28px
+			line-height: 35px
+.article-title-yl-start-normal
+	padding-top: 50px
+	*
+		font-size: 36px
+		color: $yellow
+		font-weight: 600
+		line-height: 45px
+	@media screen and(max-width:1441px)
+		padding-top: 40px
+		*
+			font-size: 32px
+			line-height: 40px
+
+	@media screen and(max-width:768px)
+		*
+			font-size: 28px
+			line-height: 35px
+.article-title-yl-center-upper
+	padding-top: 50px
+	*
+		text-align: center
+		text-transform: uppercase
+		font-size: 36px
+		color: $yellow
+		font-weight: 600
+		line-height: 45px
+	@media screen and(max-width:1441px)
+		padding-top: 40px
+		*
+			font-size: 32px
+			line-height: 40px
+
+	@media screen and(max-width:768px)
+		*
+			font-size: 28px
+			line-height: 35px
+//Brand-product-title
+	
+.brand-technology-title-upper,.brand-technology-title-normal
+	h2
+		font-size: 36px
+		color: $yellow
+		font-weight: 600
+		line-height: 45px
+	@media screen and(max-width:1441px)
+		h2
+			font-size: 32px
+			line-height: 40px
+		
+	@media screen and(max-width:768px)
+		flex: 0 0 100%
+
+		h2
+			font-size: 28px
+			line-height: 37px
+.brand-technology-title-upper
+	h2
+		text-transform: uppercase
+.brand-technology-title-normal
+	h2
+		text-transform: none
+
+
+.news-detail-page
+	.Module-236,.Module-238
+		display: none
+
+// frm ung-tuyen
+.apply-frm
+	margin: 0
+	input[type="file"]
+		left: 0
+	>div
+		width: 100%
+	#ctl00_phMain_jobApply_pnlNewComment
+		position: relative
+		display: flex
+		flex-wrap: wrap
+		>.form-group
+			width: 100%
+		.col-left,.col-right
+			flex: 0 0 100%
+			max-width: 100%
+			display: flex
+			flex-wrap: wrap
+			>.form-group
+				margin-bottom: 10px
+			@media (min-width: 576px)
+				margin: 0 -10px
+				>.form-group
+					padding: 0 10px
+			
+	.col-left
+		>.form-group
+			flex: 0 0 100%
+			max-width: 100%
+			@media (min-width: 576px)
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(4)
+					flex: 0 0 50%
+					max-width: 50%
+	.col-right
+		>.form-group
+			flex: 0 0 100%
+			max-width: 100%
+
+	h4
+		font-size: 16px
+		font-weight: 600
+		color: #034da2
+		text-transform: uppercase
+		margin-bottom: 20px
+		@media (min-width: 992px)
+			width: 100%
+	.fa-exclamation-triangle
+		top: 50%
+		transform: translateY(-50%)
+		right: 15px
+		color: red
+	.label
+		font-size: 14px
+		font-weight: 400
+		color: #999999
+		margin-bottom: 4px
+		.required
+			color: red
+	input[type="text"], input[type="password"], textarea
+		width: 100%
+		border: 1px solid #e5e5e5
+		color: lighten(black, 20%)
+		font-size: 13px
+		padding: 7px 15px
+		font-family: 'Bai Jamjuree',sans-serif
+		&:focus
+			border-color: #034da2
+	input[type="text"],input[type="password"]
+		height: 50px
+	textarea
+		height: 200px
+	.RadAsyncUpload
+		.ruDropZone
+			display: none
+		.ruFileWrap
+			position: relative
+			display: block
+			height: 50px
+		.ruFileInput, .ruBrowse
+			height: 50px
+			width: 120px
+			height: 50px
+			background: #e5e5e5
+			text-transform: uppercase
+			font-size: 15px
+			display: flex
+			justify-content: center
+			align-items: center
+			border: 0
+		.ruFileInput
+			position: absolute
+			top: 0
+			opacity: 0
+	.frm-btn
+		margin-top: 20px
+		text-align: left
+		input[type="submit"]
+			height: 40px
+			width: 100%
+			max-width: 180px
+			display: inline-flex
+			justify-content: center
+			align-items: center
+			border-radius: 0
+			border: 0
+			background: #b96e2b
+			color: #fff
+			text-transform: uppercase
+
+.form-apply
+	height: 740px!important
+	display: none
+	margin-top: 40px
+	padding: 0
+	&.active
+		display: block
+	@media (min-width: 623px)
+		height: 420px!important
+	iframe
+		border: 0
+		background: white
+		width: 100%
+		height: 100%
+//Form captcha
+.frm-captcha
+	display: inline-flex
+	padding: 0 !important
+	margin-left: -5px
+	.RadCaptcha
+		margin-left: 16px
+	@media screen and(max-width:1350px)
+		display: flex
+		flex-direction: column
+		.RadCaptcha
+			margin-left: 0
+
+.homepage
+	.product-child-content
+		display: none
+		&.active
+			display: block
+		.product-child-content-item
+			display: block
+.fixed-sidebar
+	position: fixed
+	right: 0
+	top: 30vh
+	z-index: 1005
+	ul
+		list-style-type: none
+		margin: 0
+		padding: 0
+	li
+		cursor: pointer
+		display: block
+		margin-bottom: 2px
+		a
+			cursor: pointer
+			background: #ffaa00
+			height: 50px
+			width: 50px
+			display: flex
+			justify-content: center
+			align-items: center
+			&:hover
+				em
+					transform: scale(1.15)
+			em
+				transition: transform .3s ease-in-out
+				color: #ffffff
+				font-size: 30px
+	@media screen and(max-width:768px)
+		li
+			margin-bottom: 10px
+			a
+				width: 30px
+				height: 30px
+				em
+					font-size: 20px
+//Hide element
+.news-detail-page,.product-detail-page
+	.product-brand-technology
+		display: none
+	.modulepager
+		display: none
+#ctl00_mainContent_ctl02_captcha_ctl01
+	margin-top: 14px
+	display: flex
+	justify-content: flex-start
+	align-items: flex-end
+	a
+		margin-left: 15px
+	@media screen and(max-width:576px)
+		flex-direction: column

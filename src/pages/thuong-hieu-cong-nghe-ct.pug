@@ -1,0 +1,10 @@
+extends _layout.pug
+
+block var
+	- var title = 'Home'
+	- var bodyClass = 'news-page'
+
+block main
+	include ../components/main-banner/index.pug
+	include ../components/breadcrumb/index.pug
+	include ../components/thuong-hieu-cong-nghe-ct/index.pug

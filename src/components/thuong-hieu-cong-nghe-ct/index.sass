@@ -1,0 +1,366 @@
+.product-technology-detail
+	// .row
+	// 	background: #f3f3f3
+	.container
+		.col-lg-7
+			padding: 0 0 0 15px !important
+		.col-lg-5
+			padding: 0 15px 0  0 !important
+
+		@media screen and(max-width:1025px)
+			.col-lg-7
+				padding: 0 15px !important
+			.col-lg-5
+				padding: 0 15px !important
+
+	article
+		height: 100%
+		.content
+			height: 100%
+			padding: 40px
+			background: #f3f3f3
+		.article-image
+			min-height: 100%
+			height: 0
+			overflow: hidden
+			padding-top: 520px / 810px * 100%
+			position: relative
+			img
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				object-fit: cover
+		h2
+			font-size: 26px
+			line-height: 26px
+			font-weight: 600
+			color: #666666
+			margin-bottom: 20px
+		p
+			font-size: 16px
+			font-weight: 400
+			color: #333333
+			margin-bottom: 20px
+		.download-content
+			margin-bottom: 8px
+			em
+				margin-right: 10px
+				color: $yl2
+				font-size: 18px
+			a
+				text-decoration: underline
+				font-size: 14px
+				line-height: 22px
+				font-weight: 400
+				color: $yl2
+	@media screen and(max-width:1200px)
+		article
+			.content
+				padding: 40px 16px
+			p
+				font-size: 15px
+				line-height: 22px
+.product-technology-wrapper
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 0 8.333%
+	margin: 50px -15px 0 -15px
+	flex: 0 0 100%
+	flex-wrap: wrap
+	@media screen and(max-width:576px)
+		padding: 0 
+.product-technology-wrapper-2
+	margin: 50px -15px 0 -15px
+	flex-direction: row-reverse
+	.product-technology-item
+		&:nth-child(odd)
+			.product-caption
+				text-align: left
+				h4
+					&:after
+						left: 0
+		.product-image
+			position: relative
+			height: 100%
+			overflow: hidden
+			opacity: .75
+			.play
+				position: relative
+				z-index: -1
+				&__icon
+					top: 50%
+					left: 50%
+					transform: translate(-50%,-50%)
+					position: absolute
+					z-index: 2
+					background: url('../img/play.png')
+					background-size: 100% 100%
+					background-repeat: no-repeat
+					height: 40px
+					width: 20px
+					pointer-events: none
+					// &:before
+					// 	content: ''
+					// 	display: block
+					// 	position: absolute
+					// 	z-index: -1
+					// 	left: 50%
+					// 	top: 50%
+					// 	transform: translate(-50%,-50%)
+					// 	width: 80px
+					// 	height: 80px
+					// 	background: #ffffff
+					// 	border-radius: 50%
+					// 	pointer-events: none
+					&:after
+						content: ''
+						position: absolute
+						display: inline-block
+						background-image: url(../img/play.png)
+						background-size: 100% 100%
+						width: 20px
+						height: 30px
+						left: 50%
+						transform: translate(-50%,-50%)
+						top: 50%
+			video,iframe
+				width: 100%
+				height: 475px
+				object-fit: cover
+				position: relative
+	@media screen and(max-width:1025px)
+		.product-technology-item
+			.product-image
+				margin-bottom: 30px
+				video
+					height: 350px
+	@media screen and(max-width:576px)
+		.product-technology-item
+			.product-image
+				video
+					height: 300px
+.product-technology-item
+	margin-bottom: 30px
+	display: flex
+	flex: 0 0 100%
+	flex-wrap: wrap
+	&:nth-child(odd)
+		.product-caption
+			text-align: right
+			h4
+				&:after
+					right: 0
+	&:nth-child(even)
+		flex-direction: row-reverse
+		.product-caption
+			text-align: left
+			h4
+				&:after
+					left: 0
+
+	.product-caption
+		padding: 0 15px
+		flex: 0 0 50%
+		max-width: 50%
+		h4
+			font-size: 24px
+			color: #41535d
+			font-weight: 600
+			line-height: 30px
+			margin: 30px 0 25px
+			position: relative
+			&:not(:first-child)
+				margin-top: 60px
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				top: -30px
+				width: 127px
+				height: 1px
+				background: #ffaa00
+	.product-image
+		padding: 0 15px
+		flex: 0 0 50%
+		max-width: 50%
+		img
+			max-width: 100%
+			height: auto
+		@media screen and(max-width:1025px)
+			text-align: center
+	@media screen and(max-width:1025px)
+		&:nth-child(odd)
+			.product-caption
+				text-align: left
+				h4
+					&:after
+						left: 0
+		&:nth-child(even)
+			flex-direction: row
+		.product-caption
+			flex: 0 0 100%
+			max-width: 100%
+			h4
+				margin: 20px 0 20px
+				&:not(:first-child)
+					margin-top: 60px
+				&:after
+					top: -20px
+
+		.product-image
+			margin-top: 20px
+			flex: 0 0 100%
+			max-width: 100%
+	@media screen and(max-width:576px)
+		.product-caption
+			flex: 0 0 100%
+			max-width: 100%
+			h4
+				margin: 15px 0 15px
+				&:not(:first-child)
+					margin-top: 60px
+				&:after
+					top: -15px
+
+.product-technology-item-caption
+	margin-bottom: 30px
+	display: flex
+	flex: 0 0 100%
+	flex-wrap: wrap
+	.product-caption
+		padding: 0 15px
+		flex: 0 0 100%
+		max-width: 100%
+		h4
+			font-size: 24px
+			color: #41535d
+			font-weight: 600
+			line-height: 30px
+			margin: 30px 0 25px
+			position: relative
+			&:not(:first-child)
+				margin-top: 60px
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				top: -30px
+				width: 127px
+				height: 1px
+				background: #ffaa00
+	@media screen and(max-width:1025px)
+		.product-caption
+			flex: 0 0 100%
+			max-width: 100%
+			h4
+				margin: 20px 0 20px
+				&:not(:first-child)
+					margin-top: 60px
+				&:after
+					top: -20px
+	@media screen and(max-width:576px)
+		.product-caption
+			flex: 0 0 100%
+			max-width: 100%
+			h4
+				margin: 15px 0 15px
+				&:not(:first-child)
+					margin-top: 60px
+				&:after
+					top: -15px
+.product-technology-wrapper-trinity
+.product-technology-image-wrapper
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: row-reverse
+	flex-wrap: wrap
+	flex: 0 0 100%
+	padding: 0 2px
+	.product-technology-image
+		padding: 0 2px
+		flex: 0 0 calc((100% - 33.333%) / 3)
+		&:first-child
+			.product-image
+				height: 180px
+			.product-caption
+				min-height: 136px
+				max-height: 136px
+		&:nth-child(2)
+			flex: 0 0 33.333%
+		.product-image
+			height: 320px
+			width: auto
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		.product-caption
+			display: flex
+			justify-content: center
+			align-items: center
+			padding: 25px 16px
+			margin-bottom: 4px
+			background: #ffaa00
+			text-align: center
+			*
+				font-size: 15px
+				font-weight: 600
+				color: #333333
+	@media screen and(max-width:1350px)
+		.product-technology-image
+			.product-caption
+				*
+					font-size: 13px
+	@media screen and(max-width:1200px)
+		.product-technology-image
+			&:first-child
+				.product-caption
+					min-height: auto
+	@media screen and(max-width:1025px)
+		.product-technology-image
+			padding: 0 2px
+			margin: 2px 0
+			flex: 0 0 50%
+			&:first-child
+				.product-caption
+					min-height: 136px
+					max-height: 136px
+			&:nth-child(2)
+				flex: 0 0 50%
+	@media screen and(max-width:576px)
+		.product-technology-image
+			flex: 0 0 100%
+			.product-image
+				height: 250px
+			&:first-child
+				.product-caption
+					min-height: 136px
+					max-height: 136px
+				.product-image
+					height: 250px
+			&:nth-child(2)
+				flex: 0 0 100%
+				.product-image
+					height: 250px
+	@media screen and(max-width:400px)
+		.product-technology-image
+			flex: 0 0 100%
+			.product-image
+				height: 200px
+			&:first-child
+				.product-image
+					height: 200px
+			&:nth-child(2)
+				.product-image
+					height: 200px
+.other-technology-wrapper
+	.other-technology-title
+			*
+				text-transform: uppercase
+				font-size: 24px
+				font-weight: 600
+				color: #ffaa00

@@ -1,0 +1,45 @@
+.about-us-display
+	padding: 50px 0
+	.container
+		border-bottom: 1px solid #d0d0d0
+	@media screen and(max-width:1025px)
+		padding: 40px 0
+	.about-us-nav
+		display: flex
+		justify-content: center
+		align-items: center
+		@media screen and(max-width:1200px)
+			white-space: nowrap
+			overflow: auto
+			justify-content: flex-start
+		ul
+			list-style-type: none
+			padding: 0
+			margin: 0
+		li
+			margin-bottom: 14px
+			display: inline-block
+			&:hover
+				a
+					text-decoration: underline
+			&.active
+				a
+					color: $yellow
+				&:hover
+					a
+						text-decoration: none
+			&:not(:last-child)
+				a
+					border-right: 1px solid #d0d0d0
+			a
+				text-decoration: none
+				font-size: 18px
+				color: #333333
+				font-weight: 700
+				line-height: 24px
+				text-transform: uppercase
+				padding: 0 14px
+			@media screen and(max-width:1025px)
+				margin-bottom: 10px
+				a
+					font-size: 16px

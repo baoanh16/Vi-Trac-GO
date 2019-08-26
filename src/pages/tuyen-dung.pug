@@ -1,0 +1,12 @@
+extends _layout.pug
+
+block var
+	- var title = 'Home'
+	- var bodyClass = 'news-page'
+
+block main
+	include ../components/main-banner/index.pug
+	include ../components/breadcrumb/index.pug
+	include ../components/tuyen-dung/article/index.pug
+	include ../components/tuyen-dung/working-condition/index.pug
+	include ../components/tuyen-dung/job/index.pug

@@ -1,0 +1,58 @@
+section.vt-zone-navigation.vt-section
+	.container
+		h2.vt-title.text-left dịch vụ - phụ tùng
+		.navigation-wrapper
+			.toggle-mobile Danh sách
+			.list-item
+				-for(i=0;i<12;i++)
+					.item
+						a(href="#")
+							figure
+								.ic
+									img(src="./img/ic-1.png", alt="")
+								figcaption
+									p Xe cẩu bánh xích
+									span 01
+		.product-order
+			.product-order-item
+				select
+					option(selected value='' disabled) Thương hiệu
+					option 1
+			.product-order-item
+				select
+					option(selected value='' disabled) Loại
+					option 1
+section.vt-product-list.vt-section
+	.container
+		.product-table
+			table
+				thead
+					tr
+						td(colspan='7') tất cả sản phẩm
+					tr
+						td Tên sản phẩm
+						td Thương hiệu
+						td Model
+						td Năm sản xuất
+						td Giờ hoạt động
+						td Serial/ PIN No
+						td Địa điểm
+				tbody
+					-for(i=0;i<10;i++)
+						tr
+							td.product-item
+								figure
+									.image
+										a(href="#")
+											img(src="./img/product/1.png", alt="")
+									figcaption
+										h5 
+											a(href="#") Lu 2 bánh sắt
+										p 
+											a(href="#") HDO70V
+							td hamm
+							td HDO70V
+							td 2007
+							td 2.200
+							td H1730709
+							td dongnai

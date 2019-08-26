@@ -1,0 +1,76 @@
+.product-display
+	padding: 50px 0 
+	@media screen and(max-width:1441px)
+		padding: 40px 0
+	@media screen and(max-width:1025px)
+		padding: 30px 0
+.product-item-wrapper
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	flex-wrap: wrap
+	margin: 0 -7px
+	flex: 0 0 100%
+	.product-item
+		padding: 0 7px
+		flex: 0 0 20%
+		width: 20%
+		max-width: 20%
+	.wrapper
+		transition: .3s all ease-in-out
+		min-height: 330px
+		margin-bottom: 30px
+		display: flex
+		flex-direction: column
+		box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.25)
+		&:hover
+			box-shadow: 0px 0px 0px 1px $yellow, 0px 0px 3px 0px rgba(0,0,0,0.25)
+			background: $yellow
+	.product-image
+		a
+			display: block
+			height: 100%
+			background: #ffffff
+			height: 250px
+			width: auto
+			padding: 0 20px
+			img
+				width: 100%
+				height: 100%
+				object-fit: contain
+	.product-caption
+		padding: 16px
+		*
+			font-size: 15px
+			font-weight: 600
+			color: #333333
+	@media screen and(max-width:1200px)
+		.product-item
+			flex: 0 0 25%
+			width: 25%
+			max-width: 25%
+	@media screen and(max-width:1025px)
+		.wrapper
+			min-height: 270px
+		.product-image
+			a
+				height: 200px
+		.product-item
+			flex: 0 0 33.33%
+			width: 33.33%
+			max-width: 33.33%
+
+	@media screen and(max-width:767px)
+		.product-item
+			flex: 0 0 50%
+			width: 50%
+			max-width: 50%
+	@media screen and(max-width:576px)
+		.product-caption
+			padding: 16px 10px 16px 16px
+		.product-image
+			a
+				height: 170px
+	@media screen and(max-width:400px)
+		.wrapper
+			min-height: 250px

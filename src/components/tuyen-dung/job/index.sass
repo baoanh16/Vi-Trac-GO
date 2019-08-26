@@ -1,0 +1,129 @@
+.job-list-table
+	padding:  0 0 30px 0
+	table
+		margin-top: 30px
+		width: 100%
+		.header
+			th
+				padding: 20px 0
+
+		thead
+			padding: 20px 0
+			background: #636363
+			th
+				color: #ffffff
+				text-transform: uppercase
+				font-weight: 600
+				font-size: 18px
+				line-height: 25px
+				text-align: left
+				&:not(:nth-child(2))
+					text-align: center
+
+		tbody
+			tr
+				width: 100%
+				line-height: 50px
+				height: 50px
+				border-bottom: 1px solid #e0e0e0
+				counter-increment: index
+				transition: .3s all ease-in-out
+				@media screen and(min-width:1025px)
+					&:hover
+						box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2)
+						td
+							color: $yellow
+							a
+								color: $yellow
+						th
+							&:before
+								color: $yellow
+				th
+					text-align: center
+					width: 15%
+					transition: .3s all ease-in-out
+					font-weight: 600
+					font-size: 26px
+					color: #999999
+				td
+					padding: 19px 0
+					font-size: 16px
+					text-transform: uppercase
+					color: #333333
+					line-height: 27px
+					transition: .3s all ease-in-out
+					@media screen and(max-width:576px)
+						padding: 6px 0
+					a
+						font-size: 16px
+						text-transform: uppercase
+						color: #333333
+						line-height: 27px
+						transition: .3s all ease-in-out
+					&:last-child
+						width: 20%
+					&:not(:first-child)
+						text-align: center
+					&:nth-child(2)
+						width: 50%
+						text-align: left
+	@media screen and(max-width:1025px)
+		table
+			.header
+				th
+					padding: 16px 0
+			thead
+				th
+					
+					font-size: 16px
+			tbody
+				tr
+					td
+						&:nth-child(2)
+							width: 40%
+						&:last-child
+							width: 30%
+	@media screen and(max-width:768px)
+		table
+			.header
+				th
+					padding: 16px 0
+			thead
+				th
+					
+					font-size: 14px
+			tbody
+				tr
+					th
+				
+						&:before
+							font-size: 20px
+					td
+						font-size: 14px
+						a
+							font-size: 14px
+						&:nth-child(2)
+							width: 40%
+						&:last-child
+							width: 30%
+	@media screen and(max-width:576px)
+		table
+			thead
+				display: none
+			tbody
+				tr
+					padding: 16px 0
+					display: flex
+					flex-wrap: wrap
+					height: 100%
+					th
+						flex: 0 0 100%
+						text-align: left
+						&:before
+							font-size: 24px
+					td
+						flex: 0 0 100%
+						&:not(:first-child)
+							text-align: left
+						&:before
+							content: attr(attribute) ": "

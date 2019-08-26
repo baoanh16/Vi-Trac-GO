@@ -1,0 +1,225 @@
+.news-display
+	.news-swiper-wrapper
+		box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.15)
+		position: relative
+		margin-right: 10px
+		@media screen and(max-width:1025px)
+			margin: 30px 0
+		.news-button-prev,.news-button-next
+			cursor: pointer
+			z-index: 11
+			display: flex
+			justify-content: center
+			align-items: center
+			position: absolute
+			bottom: 30px
+			width: 25px
+			height: 25px
+			display: flex
+			justify-content: center
+			align-items: center
+			border: 1px solid #636363
+			transition: .3s all ease-in-out
+			em
+				transition: .3s all ease-in-out
+				color: #636363
+				font-size: 10px
+			&:focus
+				outline: none
+			&:hover
+				border-color: #ffaa00
+				em
+					color: #ffaa00
+		.news-button-prev
+			right: 65px
+		.news-button-next
+			right: 30px
+	.swiper-caption
+		padding: 40px  50px 60px 30px
+		time
+			color: #999999
+			font-size: 12px
+		h2
+			margin: 8px 0
+			font-size: 22px
+			line-height: 30px
+			font-weight: 600
+			color: #333333
+			display: -webkit-box
+			-webkit-line-clamp: 2
+			-webkit-box-orient: vertical
+			overflow: hidden
+		h3
+			font-size: 14px
+			font-weight: 400
+			line-height: 22px
+			color: #666666
+			display: -webkit-box
+			-webkit-line-clamp: 3
+			-webkit-box-orient: vertical
+			overflow: hidden
+	.wrapper
+		.swiper-image
+			height: 430px
+			width: auto
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+	.watch-more-page
+		width: 100px
+		height: 150px
+		display: inline-block
+		z-index: 12
+		position: absolute
+		right: 30px
+		bottom: 230px
+		background: #ffaa00
+		a
+			text-align: center
+			padding: 40px 20px 20px 20px
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-direction: column
+			text-transform: uppercase
+			color: #ffffff
+			font-size: 16px
+			font-weight: 600
+		img
+			width: 32px
+			height: 32px
+	@media screen and(max-width:1350px)
+		.wrapper
+			.swiper-image
+				height: 350px
+		.watch-more-page
+			height: 130px
+			bottom: 250px
+			a
+				padding: 30px 20px 20px 20px
+	@media screen and(max-width:1025px)
+		.watch-more-page
+			bottom: 220px
+		.swiper-caption
+			padding: 20px  50px 85px 30px
+			time
+				font-size: 12px
+			h2
+				margin: 8px 0
+				font-size: 20px
+				line-height: 28px
+
+	@media screen and(max-width:768px)
+		.watch-more-page
+			left: 0
+			bottom: 30px
+			height: 35px
+			width: 200px
+			a
+				height: 100%
+				padding: 0 20px
+				flex-direction: row
+				img
+					margin-left: 16px
+					width: 24px
+					height: 24px
+		.wrapper
+			.swiper-image
+				height: 350px
+		
+	@media screen and(max-width:633)
+
+		.watch-more-page
+			bottom: 250px
+	@media screen and(max-width:576px)
+		.wrapper
+			.swiper-image
+				height: 300px
+	@media screen and(max-width:400px)
+		.wrapper
+			.swiper-image
+				height: 250px
+.news-item-side-wrapper
+	.new-item-side
+		// opacity: .6
+		margin-bottom: 40px
+		display: flex
+		justify-content: center
+		align-items: center
+		transition: opacity .3s ease-in-out
+		&:hover
+			opacity: 1
+			.news-caption
+				p
+					color: $yellow
+			&:not(:hover)
+				opacity: .6
+		.news-item-image
+			padding-left: 10px
+			height: 130px
+			min-width: 220px
+			max-width: 220px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		.news-caption
+			padding-left: 20px
+			*
+				transition: .3s all ease-in-out
+				font-size: 18px
+				font-weight: 600
+				color: #333333
+				display: -webkit-box
+				-webkit-line-clamp: 3
+				-webkit-box-orient: vertical
+				overflow: hidden
+	@media screen and(max-width:1025px)
+		.new-item-side
+			margin-bottom: 30px
+			.news-item-image
+				height: 200px
+				padding-left: 0
+			.news-caption
+				padding-left: 20px
+				*
+					font-size: 16px
+	@media screen and(max-width:768px)
+		.new-item-side
+			margin-bottom: 30px
+			.news-item-image
+				height: 130px
+.navigation-tab-wrapper
+	display: flex
+	justify-content: center
+	align-items: center
+	ol
+		padding: 30px 0
+		li
+			display: inline-block
+			margin-left: 10px
+			&.active
+				a
+					background: $yellow
+			a
+				transition: .33s all esae-in-out
+				display: flex
+				justify-content: center
+				align-items: center
+				padding: 10px 50px
+				background: #898989
+				text-decoration: none
+				text-transform: uppercase
+				color: #ffffff
+				font-size: 14px
+				line-height: 22px
+	@media screen and(max-width:1025px)
+		ol
+			padding: 30px 0 0 0
+	@media screen and(max-width:768px)
+		white-space: nowrap
+		overflow: auto
+		display: flex
+		justify-content: flex-start
+		align-items: center

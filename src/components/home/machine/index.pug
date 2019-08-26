@@ -1,0 +1,56 @@
+section.vt-home-2.vt-section.bg-white
+	.container
+		h2.vt-title Phụ tùng
+		.product-status-tab
+			.product-status-tab-item(data-status='status-1') Sản phẩm mới
+			.product-status-tab-item(data-status='status-2') Sản phẩm đã qua sử dụng
+		.product-status-content
+			.product-status-content-item(data-status='status-1')
+				.product-child-mobile-toggle Danh sách
+				.product-child-tab
+					-for(i=0;i<11; i++)
+						.product-child-tab-item(data-child='child-1')
+							figure
+								.ic
+									img(src="./img/ic-1.png", alt="")
+								figcaption
+									p Xe cẩu bánh xích (8)
+					.product-child-tab-item(data-child='child-2')
+						figure
+							.ic
+								img(src="./img/ic-1.png", alt="")
+							figcaption
+								p Xe cẩu bánh xích (8)
+				.product-child-content
+					.product-child-content-item(data-child='child-1')
+						.swiper-container
+							.swiper-wrapper
+								-for(i=0;i<7;i++)
+									.swiper-slide
+										figure
+											.image
+												a(href="#")
+													img(src="./img/home/6.png", alt="")
+												.status
+													p Mới
+											figcaption
+												h4
+													a(href="#") Kobelco
+												h5 
+													a(href="#") Cẩu bánh xích 7120S
+					.product-child-content-item(data-child='child-2')
+						.swiper-container
+							.swiper-wrapper
+								-for(i=0;i<7;i++)
+									.swiper-slide
+										figure
+											.image
+												a(href="#")
+													img(src="./img/home/3.png", alt="")
+											figcaption
+												h4
+													a(href="#") Kobelco
+												h5 
+													a(href="#") Cẩu bánh xích 7120S
+		.vt-button
+			a(href="#") Xem thêm

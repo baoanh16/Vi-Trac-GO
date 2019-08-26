@@ -1,0 +1,194 @@
+.contact-information
+	@media screen and(max-width:1350px)
+		.frm-btnwrap
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 100%
+		.bg-wrapper
+			padding: 20px 40px 80px 50px
+	article
+		background: #41535d
+		padding: 65px 20px 1px 40px
+		h3
+			font-size: 18px
+			font-weight: 600
+			color: $yellow
+			line-height: 25px
+			position: relative
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				left: 0
+				top: -15px
+				width: 70px
+				height: 1px
+				background: $yellow
+		ul
+			list-style-type: none
+			margin: 0 0 40px 0
+			padding: 0
+			li
+				margin: 6px 0
+				display: flex
+				justify-content: flex-start
+				align-items: flex-start
+				color: #ffffff
+				font-size: 14px
+				font-weight: 400
+				em
+					color: #a0a9ae
+					margin-right: 5px
+				*
+					color: #ffffff
+.contact-form-title
+	*
+		font-size: 16px
+		color: #666666
+		font-weight: 400
+		line-height: 24px
+		margin-bottom: 16px
+	@media screen and(max-width:1025px)
+			font-size: 30px
+			padding-bottom: 30px
+.bg-wrapper
+	padding: 20px 40px 20px 50px
+	background: #f9f9f9
+.wrap-form
+	.frm-btn-reset
+		display: none
+	.frm-btnwrap
+		display: inline-flex
+		margin-bottom: -16px
+		align-items: flex-start
+		justify-content: center
+		margin-right: -16px
+		float: right
+		input
+
+
+	.form-group
+		padding: 4px 10px
+		span
+			display: none
+		label
+			font-size: 14px
+			color: #666666
+			font-weight: 600
+			margin-bottom: 4px
+		span
+			font-style: italic
+			font-size: 14px
+			color: #ff1212
+		input,textarea
+			border: 1px solid #e7e7e7
+			width: 100%
+			padding: 8px 30px 8px 16px
+			color: #666666
+			font-size: 14px
+			line-height: 20px
+			background: #ffffff
+			transition: .3s all ease-in-out
+			margin-bottom: 16px
+			&:focus,&:hover
+				border-color: $yellow
+				box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3)
+				outline: none
+	.frm-btn
+		vertical-align: middle
+		transform: perspective(1px) translateZ(0)
+		transition-duration: .3s
+		transition-property: transform
+		margin-top: 13px
+		cursor: pointer
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		padding: 10px 40px
+		background: #41535d
+		color: $yellow
+		transition: .3s all ease-in-out
+		border: none
+		display: inline-block
+		vertical-align: middle
+		transform: perspective(1px) translateZ(0)
+		// box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+		position: relative
+		transition-property: color
+		transition-duration: 0.5s
+		&:before
+			content: ""
+			position: absolute
+			z-index: -1
+			pointer-events: none
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: $yellow
+			-webkit-transform: scaleX(0)
+			transform: scaleX(0)
+			-webkit-transform-origin: 0 50%
+			transform-origin: 0 50%
+			-webkit-transition-property: transform
+			transition-property: transform
+			-webkit-transition-duration: 0.5s
+			transition-duration: 0.5s
+			-webkit-transition-timing-function: ease-out
+			transition-timing-function: ease-out
+		&:hover
+			input[type='submit']
+				color: white
+				box-shadow: none !important
+			&:before
+				-webkit-transform: scaleX(1)
+				transform: scaleX(1)
+				-webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66)
+				transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66)
+		input[type='submit']
+			padding: 0
+			margin: 0
+			text-transform: uppercase
+			border: none
+			color: #ffffff
+			background: none
+			&:focus
+				outline: none
+		em
+			padding-left: 8px
+			color: #fff
+			font-size: 16px
+	@media screen and(max-width:1025px)
+		padding-bottom: 20px
+	@media screen and(max-width: 576px)
+		.form-group
+			padding:  4px 15px
+			input,textarea
+				padding: 8px 16px
+	@media screen and(max-width: 450px)
+		.form-group
+			input,textarea
+				padding: 8px 16px
+
+
+
+.google-map-location
+	padding: 50px 0 80px 0
+	@media screen and(max-width:1441px)
+		padding: 40px 0 70px 0
+	@media screen and(max-width:1025px)
+		padding: 30px 0 50px
+	.map-location-wrapper
+		height: 600px
+		width: auto
+		iframe
+			width: 100%
+			height: 100%
+			object-fit: cover
+	@media screen and(max-width:1441px)
+		.map-location-wrapper
+			height: 500px
+	@media screen and(max-width:1200px)
+		.map-location-wrapper
+			height: 400px

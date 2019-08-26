@@ -1,0 +1,50 @@
+.searchbox
+    position: absolute
+    top: 150%
+    opacity: 0
+    pointer-events: none
+    right: 0
+    width: 250px
+    z-index: 333
+    transition: .4s ease-in-out
+    display: flex
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.3)
+    input
+        padding: 4px 20px
+        font-size: 14px
+        border: 0
+        width: 100%
+        &:focus
+            outline: none
+    button
+        width: 35px
+        height: 35px
+        flex: 0 0 35px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: #3c3c3c
+        border: 0
+        color: #fff
+    &.active
+        top: calc(100% + 10px)
+        opacity: 1
+        pointer-events: initial
+    @media(max-width: 1025px)
+        .searchbox
+            position: relative
+            top: initial
+            left: initial
+            transform: initial
+            opacity: 1
+            pointer-events: initial
+            width: calc(100% - 20px)
+            margin: 0 10px
+            margin-top: 10px
+            border: 1px solid #fff
+            input
+                background: rgba(244,244,244,.3)
+                color: #333
+                border: 0
+            button
+                padding: 0 10px

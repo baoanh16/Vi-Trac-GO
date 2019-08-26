@@ -1,0 +1,91 @@
+header.vt-header
+	.nav-mega-menu-wrapper
+		.container
+			.exit-mega-wrapper
+				em.lnr.lnr-cross
+			.product-status-content-item-mega
+				h2 Sieu thi may xay dung
+				h3 Sản phẩm mới
+				.product-child-mobile-toggle-mega Sản phẩm mới
+				.product-child-tab-mega
+					-for(i=0;i<13; i++)
+						.product-child-tab-item-mega
+							a(href="#")
+								figure
+									.ic
+										img(src="./img/ic-1.png", alt="")
+									figcaption
+										p Xe cẩu bánh xích (8)
+				h3 Sản phẩm đã qua sử dụng
+				.product-child-mobile-toggle-mega Sản phẩm đã qua sử dụng
+				.product-child-tab-mega
+					-for(i=0;i<13; i++)
+						.product-child-tab-item-mega
+							a(href="#")
+								figure
+									.ic
+										img(src="./img/ic-1.png", alt="")
+									figcaption
+										p Xe cẩu bánh xích (8)
+				h2 Thuong hiệu
+				h3 Sản phẩm mới
+				.product-child-mobile-toggle-mega Thương hiệu
+				.product-status-tab-mega
+					-for(i=0;i<13; i++)
+						.product-child-tab-item-mega
+							a(href="#")
+								figure
+									.ic
+										img(src="./img/ic-1.png", alt="")
+	.container
+		.main-wrapper
+			.left-wrapper
+				.list-page.list-page-left
+					ul
+						li.active
+							a(href="#") Trang chủ
+						li
+							a(href="#") giới thiệu
+						li
+							a(href="#") sản phẩm
+						li
+							a(href="#") Dịch vụ - Phụ tùng
+						li
+							a(href="#") Tin tức
+			.main-logo
+				a(href="/")
+					img(src="./img/logo.png", alt="")
+			.right-wrapper
+				.list-page.list-page-right
+					ul
+						li
+							a(href="#") Đối tác
+						li
+							a(href="#") tuyển dụng
+						li
+							a(href="#") Liên hệ
+				.user-wrapper
+					em.mdi.mdi-account
+					.user-toggle-wrapper
+						a(href="#") Tài khoản
+				.cart-wrapper
+					a(href="#")
+						em.mdi.mdi-cart
+						span (2)
+				.language-wrapper
+					.language-active
+						p VN
+						em.lnr.lnr-chevron-down
+					.language-list
+						a(href="#").language-item EN
+						a(href="#").language-item EN
+				.search-wrapper
+					.search-icon
+						em.mdi.mdi-magnify
+					.searchbox
+						input(type="text")
+						button(type='submit')
+							em.mdi.mdi-magnify
+				.toggle-button
+					em.mdi.mdi-menu
+	.mobile-wrapper

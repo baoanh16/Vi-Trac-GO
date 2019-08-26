@@ -1,0 +1,98 @@
+.global-breadcrumb
+	position: relative
+	z-index: 1
+	height: 40px
+	padding: 10px 0
+	background: #ffffff
+	@media screen and(max-width:500px)
+		display: none
+	.bg-grey-skew
+		position: relative
+		margin-top: -40px
+		display: inline-block
+		transform: skew(20deg)
+		margin-right: 30px
+		background: #636363
+		h1
+			padding: 13px 30px
+			font-size: 30px
+			font-weight: 700
+			color: #ffffff
+			text-transform: uppercase
+			transform: skew(-20deg)
+		@media screen and(max-width:1200px)
+			h1
+				font-size: 24px
+		@media screen and(max-width:1025px)
+			margin: 0
+			padding: 0
+			h1
+				display: none
+	.container
+		display: flex
+		justify-content: flex-start
+		align-items: center
+	ol
+		white-space: nowrap
+		padding: 0
+		list-style-type: none
+		li
+			display: inline-flex
+			font-size: 16px
+			line-height: 23px
+			padding-right: 30px
+			position: relative
+			&:after
+				font-family: 'Material Design Icons'
+				font-size: 20px
+				content: '\f142'
+				display: block
+				position: absolute
+				color: #666666
+				right: 6px
+				bottom: 0
+			&.active
+			&:first-child
+				span
+					display: none
+				&:after
+					bottom: -5px
+				a
+					display: inline
+					width: 16px
+					position: relative
+					&:before
+						font-family: 'Material Design Icons'
+						content: '\f2dc'
+						font-size: 20px
+						color: #666666
+						position: absolute
+						width: 1px
+						bottom: -5px
+						left: 0
+			&:last-child
+				&:after
+					display: none
+			&.active
+				color: #666666
+			a
+				text-decoration: none
+				font-size: 16px
+				line-height: 23px
+				color: #666666
+	@media screen and(max-width: 1200px)
+		padding: 10px 0
+		margin-bottom: 0
+	@media screen and(max-width: 768px)
+		margin-bottom: 0
+		padding: 8px 0
+	@media screen and(max-width: 576px)
+		.breadcrumb
+			li
+				font-size: 14px
+				line-height: 22px
+				a
+					font-size: 13px
+					line-height: 22px
+					span
+						font-size: 13px

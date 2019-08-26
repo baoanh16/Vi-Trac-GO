@@ -1,0 +1,36 @@
+block var
+
+doctype html
+
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		link(rel="stylesheet" href="./css/core.min.css")
+		link(rel="stylesheet", href="./css/main.min.css")
+		link(href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet")
+		title #{title}
+	body(class=bodyClass)
+		block header
+			include ../components/header/index.pug
+		main
+			block main
+			.fixed-sidebar
+				ul
+					li
+						a(href="#")
+							em.mdi.mdi-voice
+					li
+						a(href="")
+							em.mdi.mdi-phone
+					li
+						a(href="#")
+							em.mdi.mdi-map-marker-radius
+					li
+						a(href="#")
+							em.mdi.mdi-launch
+		block footer
+			include ../components/footer/index.pug
+		script(src="./js/core.min.js")
+		script(src="./js/main.min.js")

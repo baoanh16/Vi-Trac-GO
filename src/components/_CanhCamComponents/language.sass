@@ -1,0 +1,39 @@
+.language-wrapper
+	position: relative
+	padding: 0 10px
+	user-select: none
+	.language-active
+		display: flex
+		cursor: pointer
+		justify-content: center
+		align-items: center
+		height: 100%
+		em
+			transition: transform .3s ease-in-out
+			font-size: 14px
+			color: #ebebeb
+			margin-left: 10px
+	.language-list
+		position: absolute
+		top: 150%
+		left: 50%
+		transform: translateX(-50%)
+		transition: .6s ease-in-out all
+		opacity: 0
+		pointer-events: none
+		background: #41535d
+		// left: 0
+		width: 50px
+		a
+			padding: 10px
+			display: flex
+			justify-content: center
+			align-items: center
+	&.active
+		.language-active
+			em
+				transform: rotate(-180deg)
+		.language-list
+			top: calc(100% + 10px)
+			opacity: 1
+			pointer-events: initial

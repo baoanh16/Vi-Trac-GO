@@ -1,0 +1,357 @@
+.vt-header
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 55
+	width: 100%
+	background: #41535d
+	color: #fff
+	em
+		font-size: 18px
+	.main-wrapper
+		padding: 10px 0
+		display: flex
+	.main-logo
+		position: relative
+		margin: 0 auto
+		margin-bottom: -60px
+		z-index: 120
+		&:before
+			content: ''
+			width: 0
+			height: 0
+			border-left: 75px solid transparent
+			border-right: 75px solid transparent
+			border-top: 70px solid #41535d
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translateX(-50%)
+		a
+			display: block
+			position: relative
+		img
+			height: 100px
+	.user-wrapper, .cart-wrapper, .language-wrapper
+		padding: 0 10px
+		cursor: pointer
+		display: flex
+		z-index: 333
+		justify-content: center
+		align-items: center
+		position: relative
+		a
+			transition: .4s ease-in-out all
+			font-size: 13px
+		span
+			color: #ffaa00
+		&:after
+			content: ''
+			height: 12px
+			width: 1px
+			position: absolute
+			top: 50%
+			left: 0
+			transform: translateY(-50%)
+			background: rgba(#fff, .2)
+	.search-wrapper
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
+	.search-icon
+		width: 35px
+		height: 35px
+		cursor: pointer
+		display: flex
+		justify-content: center
+		align-items: center
+		background: #3c3c3c
+	.list-page
+		display: flex
+		justify-content: center
+		align-items: center
+		@media screen and(max-width:1025px)
+			display: none
+		ul
+			list-style: none
+			padding-left: 0
+			display: flex
+			li
+				padding: 0 15px
+				&:hover, &.active
+					a
+						color: #fa0
+			a
+				font-size: 16px
+				transition: .4s ease-in-out all
+				font-weight: 500
+				text-transform: uppercase
+	.left-wrapper
+		position: relative
+		ul
+			li
+				&:first-child
+					padding-left: 0
+					a
+						font-size: 0
+						&:after
+							content: '\f2dc'
+							font: normal normal normal 24px/1 Material Design Icons
+							font-size: 16px
+	
+	.right-wrapper, .left-wrapper
+		width: calc(100% / 2 - 50px)
+		display: flex
+	.right-wrapper
+		justify-content: flex-end
+		.user-wrapper
+			&.active
+				.user-toggle-wrapper
+					li
+						&:not(.firstnav)
+							opacity: 1
+							pointer-events: auto
+			.user-toggle-wrapper
+				ul
+					list-style-type: none
+				li
+					list-style-type: none
+					&:first-child
+						margin-left: 6px
+						opacity: 1 !important
+						position: initial !important
+						pointer-events: auto !important
+					&:not(.firstnav)
+						transition: .3s opacity ease-in-out
+						position: absolute
+						bottom: -16px
+						right: 0
+						opacity: 0
+						pointer-events: none
+
+	.toggle-button
+		display: none
+	@media(max-width: 1400px)
+		.right-wrapper
+			.user-wrapper
+				.user-toggle-wrapper
+					li
+						&.firstnav
+							font-size: 11px
+							margin: 0 0 !important
+	@media(max-width: 1350px)
+		.right-wrapper
+			.user-wrapper
+				.user-toggle-wrapper
+					li
+						&.firstnav
+							white-space: nowrap
+		.list-page-right
+			li
+				padding: 0 10px !important
+		.list-page
+			ul
+				li
+					a
+						font-size: 14px
+	@media(max-width: 1220px)
+		.list-page-right
+			li
+				padding: 0 8px !important
+	@media(max-width: 1200px)
+		.right-wrapper
+			.user-wrapper
+				&.active
+					.user-toggle-wrapper
+						li
+							&:not(.firstnav)
+								opacity: 1
+								pointer-events: auto
+				.user-toggle-wrapper
+					width: 200px
+					flex-direction: column
+
+					display: flex
+					justify-content: center
+					align-items: center
+					height: 50px
+					ul
+						list-style-type: none
+					li
+						list-style-type: none
+						&:first-child
+							margin-bottom: 10px
+							margin-left: 10px
+							opacity: 1 !important
+							position: static !important
+							pointer-events: auto !important
+						&:not(.firstnav)
+							transition: .3s opacity ease-in-out
+							position: static !important
+							bottom: 1px
+							opacity: 0
+							pointer-events: none
+		.list-page
+			ul
+				li
+					padding: 0 7px
+					a
+						font-size: 12px
+		.user-wrapper
+			position: relative
+			&.active
+				.user-toggle-wrapper
+					top: calc(100% + 10px)
+					opacity: 1
+					pointer-events: initial
+					li
+						&:not(.firstnav)
+							opacity: 1
+							pointer-events: auto
+		.user-toggle-wrapper
+			z-index: 33
+			position: absolute
+			top: 150%
+			opacity: 0
+			pointer-events: none
+			transition: .5s ease-in-out all
+			background: #41535d
+			padding: 10px
+			text-align: center
+			
+		.main-logo
+			margin-bottom: -50px
+			&:before
+				border-top: 60px solid #41535d
+				border-right: 65px solid transparent
+				border-left: 65px solid transparent
+			img
+				height: 80px
+	@media(max-width: 1025px)
+		.mobile-wrapper
+			position: fixed
+			padding-top: 10px
+			top: 60px
+			left: -300px
+			width: 300px
+			background: #41535d
+			height: calc(100vh - 55px)
+			transition: .4s ease-in-out all
+			z-index: -1
+			&.active
+				left: 0
+				z-index: 12
+		.right-wrapper, .left-wrapper
+			width: auto
+		.main-logo
+			margin-left: 0
+			margin-bottom: 0
+			img
+				height: 40px
+			&:before
+				display: none
+		.list-page
+			ul
+				display: block
+				width: 100%
+				a
+					padding: 6px 10px
+					font-size: 13px
+					display: inline-block
+		.searchbox
+			margin-top: 10px
+			position: relative
+			top: initial
+			opacity: 1
+			box-shadow: none
+			pointer-events: initial
+			width: 100%
+			padding: 0 10px
+		.search-wrapper
+			display: none
+		.toggle-button
+			align-self: center
+			width: 35px
+			height: 35px
+			display: flex
+			justify-content: center
+			align-items: center
+			background: #3c3c3c
+			&.active
+				em
+					&:before
+						content: '\f156'
+.nav-mega-menu-wrapper
+	padding: 30px 0
+	position: absolute
+	left: 0
+	top: 60px
+	width: 100vw
+	background: #33424a
+	overflow-y: scroll
+	z-index: -1
+	opacity: 0
+	pointer-events: none
+	transition: opacity .3s ease-in-out
+	.menu-brand
+		h2
+			margin-bottom: 20px
+		.product-child-tab
+			margin-top: 20px
+	@media screen and(max-width:1200px)
+		top: 55px
+	&.active
+		z-index: 130
+		opacity: 1
+		height: calc( 100vh - 60px)
+		pointer-events: auto
+		.exit-mega-wrapper
+			z-index: 14
+			pointer-events: auto
+				
+	.container
+		position: relative
+	.exit-mega-wrapper
+		cursor: pointer
+		position: absolute
+		top: 0
+		right: 30px
+		z-index: -1
+		display: flex
+		pointer-events: none
+		justify-content: center
+		align-items: center
+		@media screen and(max-width:576px)
+			top: -36px
+			right: 20px
+		em
+			font-size: 30px
+			color: #ffffff
+	h2
+		margin-top: 16px
+		font-size: 24px
+		font-weight: 600
+		z-index: 10
+		text-transform: uppercase
+		position: relative
+		display: block
+		@media screen and(max-width:576px)
+			margin-bottom: 20px
+			font-size: 18px
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			bottom: -8px
+			width: 90px
+			height: 3px
+			background: $yellow
+	h3
+		font-size: 16px
+		font-weight: 600
+		text-transform: uppercase
+		margin: 16px 0
+		@media screen and(max-width:576px)
+			display: none
