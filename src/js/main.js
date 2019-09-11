@@ -154,6 +154,8 @@ const Slider = {
 		return new Swiper(".swiper-home-product-1.swiper-container", {
 			slidesPerView: 5,
 			observer: true,
+			watchSlidesProgress: true,
+			watchSlidesVisibility: true,
 			observeParents: true,
 			autoplay: {
 				delay: 4000
@@ -181,6 +183,8 @@ const Slider = {
 		return new Swiper(".swiper-home-product-2.swiper-container", {
 			slidesPerView: 5,
 			observer: true,
+			watchSlidesProgress: true,
+			watchSlidesVisibility: true,
 			observeParents: true,
 			autoplay: {
 				delay: 4000
@@ -388,13 +392,34 @@ $(document).ready(function() {
 	$(".lightgallery").lightGallery({
 		thumbnail: true
 	});
+
 	breadcrumbTitle();
 	swiperInit();
 	tabActive();
+	tabActiveProduct();
+	tabActiveAccessory();
 	tabActiveHomeProduct();
 	toggleApplyForm();
-	toggleMega();
+	toggleMegaSanPham();
+	toggleMegaPhuTung();
+	FilterCourse();
 	hideAccountIcon();
+	mediumZoom(document.querySelectorAll(".medium-zoom"));
+	scrollFixHeight();
+
+	if ($("body").hasClass("about-us")) {
+		let offset = 80;
+		let scrollToSection = $('.about-us-nav ul li a[href*="#"]');
+		scrollToSection.on("click", function(e) {
+			$("html, body").animate(
+				{
+					scrollTop: $($(this).attr("href")).offset().top - offset
+				},
+				600,
+				"linear"
+			);
+		});
+	}
 });
 
 //My custom javascript BEgin here
@@ -402,6 +427,23 @@ $(document).ready(function() {
 $(window).resize(function() {
 	hideAccountIcon();
 });
+function FilterCourse() {
+	$(".product-order .product-order-item select").on("change", function() {
+		window.location.href = $(this).val();
+	});
+}
+function scrollFixHeight() {
+	let logo = $(".main-wrapper .main-logo");
+	if (
+		document.body.scrollTop > 60 ||
+		document.documentElement.scrollTop > 60
+	) {
+		logo.addClass("minize");
+	} else {
+		logo.removeClass("minize");
+	}
+}
+
 function hideAccountIcon() {
 	if ($(window).width() > 1200) {
 		if ($(".user-wrapper .user-toggle-wrapper li").hasClass("firstnav")) {
@@ -427,16 +469,28 @@ function breadcrumbTitle() {
 		$(".global-breadcrumb h1").html(breadcrumbValue);
 	}
 }
-function toggleMega() {
+
+function toggleMegaSanPham() {
 	$(".list-page-left ul li:nth-child(3) a").on("click", function() {
-		$(".nav-mega-menu-wrapper").toggleClass("active");
-		if ($(".nav-mega-menu-wrapper").hasClass("active")) {
+		$("#mega-173").toggleClass("active");
+		if ($("#mega-173").hasClass("active")) {
 			$("body").toggleClass("is-hidden");
 		} else {
 			$("body").removeClass("is-hidden");
 		}
 	});
 }
+function toggleMegaPhuTung() {
+	$(".list-page-left ul li:nth-child(4) a").on("click", function() {
+		$("#mega-174").toggleClass("active");
+		if ($("#mega-174").hasClass("active")) {
+			$("body").toggleClass("is-hidden");
+		} else {
+			$("body").removeClass("is-hidden");
+		}
+	});
+}
+
 function swiperInit() {
 	var mySwiper = new Swiper(".swiper-container.news-swiper", {
 		// Optional parameters
@@ -491,13 +545,16 @@ function swiperInit() {
 		breakpoints: {
 			// when window width is >= 320px
 			320: {
-				slidesPerView: 1
+				slidesPerView: 1,
+				spaceBetween: 20
 			},
 			400: {
-				slidesPerView: 2
+				slidesPerView: 2,
+				spaceBetween: 20
 			},
 			576: {
-				slidesPerView: 3
+				slidesPerView: 3,
+				spaceBetween: 40
 			},
 
 			// when window width is >= 640px
@@ -556,6 +613,10 @@ function swiperInit() {
 		}
 	});
 }
+window.onscroll = function() {
+	scrollFixHeight();
+};
+
 function tabActiveHomeProduct() {
 	$(".vt-home-2 .product-status-tab .product-status-tab-item ").on(
 		"click",
@@ -568,6 +629,41 @@ function tabActiveHomeProduct() {
 		}
 	);
 }
+
+function tabActiveProduct() {
+	$(".home-product-navigation .product-child-tab-item").on(
+		"click",
+		function() {
+			$(this)
+				.parents(".product-child-tab")
+				.find(".product-child-tab-item")
+				.removeClass("active");
+			$(this).addClass("active");
+
+			var display = $(this).attr("data-type");
+			$(".home-product-tab-item").removeClass("active");
+			$("#" + display).addClass("active");
+		}
+	);
+}
+
+function tabActiveAccessory() {
+	$(".home-accessories-navigation .product-child-tab-item").on(
+		"click",
+		function() {
+			$(this)
+				.parents(".product-child-tab")
+				.find(".product-child-tab-item")
+				.removeClass("active");
+			$(this).addClass("active");
+
+			var display = $(this).attr("data-type");
+			$(".home-accessories-tab-item").removeClass("active");
+			$("#" + display).addClass("active");
+		}
+	);
+}
+
 function tabActive() {
 	$(".tab-content-wrapper ul li a").on("click", function() {
 		$(this)

@@ -6,7 +6,6 @@
 		.header
 			th
 				padding: 20px 0
-
 		thead
 			padding: 20px 0
 			background: #636363
@@ -19,15 +18,19 @@
 				text-align: left
 				&:not(:nth-child(2))
 					text-align: center
-
 		tbody
+			counter-reset: number
 			tr
 				width: 100%
 				line-height: 50px
 				height: 50px
 				border-bottom: 1px solid #e0e0e0
-				counter-increment: index
 				transition: .3s all ease-in-out
+				&:last-child
+					th
+						&:before
+							content: counter(number) 
+
 				@media screen and(min-width:1025px)
 					&:hover
 						box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2)
@@ -39,12 +42,15 @@
 							&:before
 								color: $yellow
 				th
-					text-align: center
-					width: 15%
-					transition: .3s all ease-in-out
-					font-weight: 600
-					font-size: 26px
-					color: #999999
+					&:before
+						counter-increment: number
+						content: "0" counter(number) 
+						text-align: center
+						width: 15%
+						transition: .3s all ease-in-out
+						font-weight: 600
+						font-size: 26px
+						color: #999999
 				td
 					padding: 19px 0
 					font-size: 16px
@@ -112,6 +118,7 @@
 				display: none
 			tbody
 				tr
+					position: relative
 					padding: 16px 0
 					display: flex
 					flex-wrap: wrap
@@ -119,10 +126,21 @@
 					th
 						flex: 0 0 100%
 						text-align: left
+							
 						&:before
 							font-size: 24px
 					td
 						flex: 0 0 100%
+						&:nth-child(2)
+							&:before
+								display: none
+							a
+								position: absolute
+								top: 30px
+								left: 50px
+								font-size: 20px
+								font-weight: 600
+								color: #c41d30
 						&:not(:first-child)
 							text-align: left
 						&:before

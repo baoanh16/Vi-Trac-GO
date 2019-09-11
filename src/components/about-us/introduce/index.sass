@@ -1,13 +1,15 @@
 .introduce-about-us-company
 	.table-wrapper
-		margin: 20px 8.33%
+		margin: 20px 8.33% 50px 8.33%
 		padding: 50px
 		background: #33424a
 		@media screen and(max-width:1025px)
-			margin: 20px 0
+			margin: 20px 0 40px
+		@media screen and(max-width:576px)
+			padding: 50px 15px !important
 
 	table
-		width: 100%
+		width: 100% !important
 		tr
 			border-bottom: 1px solid #48555c
 			width: 100%
@@ -34,6 +36,7 @@
 					padding: 0
 					width: 100%
 					padding:  0 0 16px 0
+			
 					&:first-child
 						padding: 10px 0 0 0
 						width: 100%

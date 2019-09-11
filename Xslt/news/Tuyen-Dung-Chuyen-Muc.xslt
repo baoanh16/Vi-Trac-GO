@@ -70,9 +70,7 @@
 						</xsl:attribute>
 					</img>
 				</div>
-				<div class="logo-yellow-button">
-					<img src="/Data/Sites/1/media/logo.png" alt=""></img>
-				</div>
+
 				<figcaption>
 					<h3>
 						<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>

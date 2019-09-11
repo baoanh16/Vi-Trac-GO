@@ -9,7 +9,7 @@
 	</xsl:template>
 	<xsl:template match="Zone">
 
-		<div class="product-status-content home-product-navigation">
+		<div class="product-status-content home-accessories-navigation">
 			<xsl:apply-templates select="Zone" mode="Zone2TabContent"></xsl:apply-templates>
 		</div>
 	</xsl:template>
@@ -40,7 +40,7 @@
 				<xsl:value-of select="Title"></xsl:value-of>
 			</xsl:attribute>
 			<xsl:attribute name="data-type">
-				<xsl:text>home-tab-product-</xsl:text>
+				<xsl:text>home-accessories-</xsl:text>
 				<xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
 			</xsl:attribute>
 			<figure>
@@ -57,7 +57,6 @@
 				<figcaption>
 					<p>
 						<xsl:value-of select="Title"></xsl:value-of>
-
 					</p>
 				</figcaption>
 			</figure>

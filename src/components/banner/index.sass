@@ -1,9 +1,9 @@
 .vt-banner
+	
 	.swiper-image
 		img
-			width: 100%
-			min-height: 300px
-			object-fit: cover
+		
+			max-width: 100%
 	.swiper-content
 		position: absolute
 		left: 50%
@@ -43,6 +43,15 @@
 			img
 				filter: initial
 	@media(min-width: 1025px)
+		height: calc( 100vh -60px)
+		.swiper-container
+			height: 100%
+		.swiper-image
+			height: 100%
+			img
+				width: 100%
+				object-fit: cover
+				height: 100%
 		.swiper-content
 			bottom: 80px
 			h1

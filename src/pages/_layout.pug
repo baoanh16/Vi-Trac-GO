@@ -16,20 +16,7 @@ html(lang="en")
 			include ../components/header/index.pug
 		main
 			block main
-			.fixed-sidebar
-				ul
-					li
-						a(href="#")
-							em.mdi.mdi-voice
-					li
-						a(href="")
-							em.mdi.mdi-phone
-					li
-						a(href="#")
-							em.mdi.mdi-map-marker-radius
-					li
-						a(href="#")
-							em.mdi.mdi-launch
+			include ../components/fixed/index.pug
 		block footer
 			include ../components/footer/index.pug
 		script(src="./js/core.min.js")

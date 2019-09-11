@@ -2,19 +2,30 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes" />
 	<xsl:template match="/">
-		<div class="product-child-content-item ">
-			<div class="swiper-container swiper-home-product-2">
-				<div class="swiper-wrapper">
-					<xsl:apply-templates select="/ProductList/Product"></xsl:apply-templates>
+		<div class="product-child-content-wrapper-swiper">
+			<div class="product-child-content active" id="status-224">
+				<div class="product-child-content-item ">
+					<div class="row-5">
+						<xsl:apply-templates select="/ProductList/Product"></xsl:apply-templates>
+					</div>
+
 				</div>
-				<div class="swiper-button-prev zone-product-home-prev-2"></div>
-				<div class="swiper-button-next zone-product-home-next-2"></div>
 			</div>
 		</div>
-
+		<div class="vt-button">
+			<a>
+				<xsl:attribute name="href">
+					<xsl:value-of select="/ProductList/ZoneUrl"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name="title">
+					<xsl:value-of select="Title"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:text>Xem thêm</xsl:text>
+			</a>
+		</div>
 	</xsl:template>
 	<xsl:template match="Product">
-		<div class="swiper-slide">
+		<div class="w-20">
 			<figure>
 				<div class="image">
 					<a>

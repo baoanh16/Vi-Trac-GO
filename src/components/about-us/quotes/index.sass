@@ -16,7 +16,13 @@
 			height: 400px
 		@media screen and(max-width:1025px)
 			position: static
-			display: none
+			display: block
+			margin: 0 auto
+			left: 0
+
+		@media screen and(max-width:576px)
+			width: 100%
+			img
 	.row
 		position: relative
 	.container
@@ -33,6 +39,8 @@
 		@media screen and(max-width:1025px)
 			.col-lg-9
 				padding-left: 0
+		@media screen and(max-width:576px)
+			box-shadow: none
 	.figure-image
 		box-shadow: 30px 30px 0px 0px $yellow
 		height: 520px

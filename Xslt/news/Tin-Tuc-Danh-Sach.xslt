@@ -51,7 +51,7 @@
 							<xsl:value-of select="Title"></xsl:value-of>
 						</xsl:attribute>
 						<xsl:text>Xem thêm</xsl:text>
-						<img src="/Data/Sites/1/media/logo.png" alt=""></img>
+						<em class="lnr lnr-arrow-right"></em>
 					</a>
 
 
@@ -124,7 +124,7 @@
 					</a>
 				</div>
 				<div class="news-caption">
-					<p>
+					<h3>
 						<a>
 							<xsl:attribute name="href">
 								<xsl:value-of select="Url"></xsl:value-of>
@@ -136,6 +136,9 @@
 							<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 						</a>
 
+					</h3>
+					<p>
+						<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
 					</p>
 				</div>
 			</div>

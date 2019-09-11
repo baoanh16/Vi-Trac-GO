@@ -10,14 +10,14 @@
 							<div class="product-top-wrapper">
 								<div class="swiper-container">
 									<div class="swiper-wrapper">
-										<xsl:apply-templates select="/ProductDetail/ProductImages"></xsl:apply-templates>
+										<xsl:apply-templates select="/ProductDetail/ProductImages" mode="Top"></xsl:apply-templates>
 									</div>
 								</div>
 							</div>
 							<div class="product-thumbs-wrapper">
 								<div class="swiper-container">
 									<div class="swiper-wrapper">
-										<xsl:apply-templates select="/ProductDetail/ProductImages"></xsl:apply-templates>
+										<xsl:apply-templates select="/ProductDetail/ProductImages" mode="Thumb"></xsl:apply-templates>
 									</div>
 								</div>
 							</div>
@@ -39,7 +39,7 @@
 										<xsl:attribute name="data-productid">
 											<xsl:value-of select="ProductId"></xsl:value-of>
 										</xsl:attribute>
-										<xsl:text>Mua ngay</xsl:text>
+										<xsl:text>Liên hệ</xsl:text>
 										<em class="lnr lnr-arrow-right"></em>
 									</a>
 								</div>
@@ -125,7 +125,23 @@
 		</section>
 	</xsl:template>
 
-	<xsl:template match="ProductImages">
+	<xsl:template match="ProductImages" mode="Top">
+		<div class="swiper-slide">
+			<div class="wrapper">
+				<div class="swiper-image">
+					<img class="medium-zoom">
+						<xsl:attribute name="src">
+							<xsl:value-of select="ImageUrl"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
+					</img>
+				</div>
+			</div>
+		</div>
+	</xsl:template>
+	<xsl:template match="ProductImages" mode="Thumb">
 		<div class="swiper-slide">
 			<div class="wrapper">
 				<div class="swiper-image">

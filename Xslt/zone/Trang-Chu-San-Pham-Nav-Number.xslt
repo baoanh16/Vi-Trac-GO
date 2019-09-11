@@ -57,13 +57,11 @@
 				<figcaption>
 					<p>
 						<xsl:value-of select="Title"></xsl:value-of>
-
+						<xsl:value-of select="Description"></xsl:value-of>
 					</p>
+
 				</figcaption>
 			</figure>
-			<span>
-				<xsl:value-of select="Description" disable-output-escaping="yes"></xsl:value-of>
-			</span>
 		</a>
 	</xsl:template>
 </xsl:stylesheet>

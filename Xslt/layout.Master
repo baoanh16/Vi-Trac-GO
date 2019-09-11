@@ -11,6 +11,9 @@
 	<portal:StyleSheetCombiner ID="StyleSheetCombiner" runat="server" IncludejQueryUI="false"
 		JQueryUIThemeName="smoothness" />
 	<portal:Favicon ID="Favicon1" runat="server" />
+	<link
+		href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,700i&display=swap&subset=vietnamese"
+		rel="stylesheet">
 	<portal:ScriptLoader ID="ScriptLoader1" runat="server" IncludejQueryUICore="true" IncludeFancyBox="true" />
 	<link rel="apple-touch-icon" sizes="57x57" href="/Data/Sites/1/media/favicon/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/Data/Sites/1/media/favicon/apple-icon-60x60.png">
@@ -59,10 +62,17 @@
 		<div id="wrapper">
 
 			<header class="vt-header">
-				<div class="nav-mega-menu-wrapper">
+				<div class="nav-mega-menu-wrapper" id="mega-173">
 					<div class="container">
 						<div class="exit-mega-wrapper"><em class="lnr lnr-cross"></em></div>
 						<portal:ModuleWrapper ID="mdl259" runat="server" ConfigureModuleId="259" />
+					</div>
+				</div>
+				<div class="nav-mega-menu-wrapper" id="mega-174">
+					<div class="container">
+						<div class="exit-mega-wrapper"><em class="lnr lnr-cross"></em></div>
+						<portal:ModuleWrapper ID="mdl1343" runat="server" ConfigureModuleId="1343" />
+							<portal:ModuleWrapper ID="mdl1345" runat="server" ConfigureModuleId="1345" />
 					</div>
 				</div>
 				<div class="container">

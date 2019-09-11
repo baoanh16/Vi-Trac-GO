@@ -137,6 +137,13 @@ img
 .brand-technology-title-upper
 	h2
 		text-transform: uppercase
+	.brand-image-logo
+		display: flex
+		flex: auto
+		width: 160px
+		img
+			width: 100%
+			height: auto
 .brand-technology-title-normal
 	h2
 		text-transform: none
@@ -286,6 +293,8 @@ img
 			margin-left: 0
 
 .homepage
+	.product-status-content
+		padding: 0 !important
 	.product-child-content
 		display: none
 		&.active
@@ -305,6 +314,32 @@ img
 		cursor: pointer
 		display: block
 		margin-bottom: 2px
+		position: relative
+		&:hover
+			@media screen and(min-width:1025px)
+				.phone-number
+					opacity: 1
+					pointer-events: auto
+					z-index: 1
+		.phone-number
+			transition: opacity .3s ease-in-out
+			opacity: 0
+			pointer-events: none
+			z-index: -1
+			position: absolute
+			top: 0
+			left: -200px
+			background: #41535d
+			width: 100%
+			padding-left: 70px
+			width: 200px
+			a
+				white-space: nowrap
+				text-decoration: none
+				background: none
+				color: #ffffff
+				font-size: 18px
+			
 		a
 			cursor: pointer
 			background: #ffaa00
@@ -343,3 +378,100 @@ img
 		margin-left: 15px
 	@media screen and(max-width:576px)
 		flex-direction: column
+//Tab home
+.home-product-tab-wrapper
+	.home-product-tab-item
+		display: none
+		&.active
+			display: block
+.home-accessories-tab-wrapper
+	.home-accessories-tab-item
+		display: none
+		&.active
+			display: block
+.medium-zoom-overlay
+	z-index: 1
+	background: rgba(#000000,.8) !important
+.medium-zoom-image--opened 
+	z-index: 11
+.home-product-navigation,.home-accessories-navigation
+	.product-child-tab-item
+		figcaption
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: space-between
+			width: 100%
+			height: 100%
+			font-size: 13px
+			text-align: center
+.signup-page
+	.signup-panel
+		.signup-form
+			background: #fff
+			padding: 50px
+			margin: 0 440px
+	span
+		color: #ed1c24
+		font-size: 12px
+		font-style: italic
+	input[type="submit"]
+		border: none
+		color: #fff
+		background: #ed1c24
+		text-transform: uppercase
+		width: 100%
+		padding: 10px 0
+		border-radius: 5px
+		font-weight: 400
+	select
+		width: 100%
+		height: 40px
+		border-radius: 5px
+	.col-xl-6
+		flex:  0 0 100% !important
+		max-width: 100%
+	.signup-form
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		flex-direction: column
+		.form-group
+			margin-bottom: 10px
+			input
+				background: none
+				border: 1px solid #999
+				border-radius: 5px
+				width: 100%
+				height: 40px
+				padding: 0 16px 0 10px
+				&:focus
+					outline: none
+			
+		h1
+			font-size: 18px
+			color: #333333
+			text-align: center
+			margin-bottom: 20px
+		label
+			font-size: 14px
+			margin-bottom: 10px
+	#ctl00_mainContent_RegisterUser_CreateUserStepContainer_captcha_ctl01
+		display: flex
+		justify-content: flex-start
+		margin-bottom: 15px
+		align-items: center
+	#ctl00_mainContent_RegisterUser_CreateUserStepContainer_captcha_CaptchaImageUP
+		display: inline
+		margin-block-end: 15px
+		margin-right: 15px
+.Module-1342
+	.ModuleContent
+		display: flex
+		justify-content: space-between
+		align-items: center
+	@media screen and(max-width:576px)
+		.ModuleContent
+			flex-direction: column
+			align-items: flex-start
+		

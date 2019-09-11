@@ -3,19 +3,30 @@
 	top: 0
 	left: 0
 	z-index: 55
+	height: 60px
 	width: 100%
 	background: #41535d
 	color: #fff
+	.container
+		height: 100%
 	em
 		font-size: 18px
 	.main-wrapper
 		padding: 10px 0
 		display: flex
+		height: 100%
 	.main-logo
 		position: relative
 		margin: 0 auto
 		margin-bottom: -60px
 		z-index: 120
+		&.minize
+			&:before
+				opacity: 0
+
+			a
+				img
+					height: 40px
 		&:before
 			content: ''
 			width: 0
@@ -26,11 +37,14 @@
 			position: absolute
 			top: 50%
 			left: 50%
+			opacity: 1
+			transition: opacity .3s ease-in-out
 			transform: translateX(-50%)
 		a
 			display: block
 			position: relative
 		img
+			transition: .3s all ease-in-out
 			height: 100px
 	.user-wrapper, .cart-wrapper, .language-wrapper
 		padding: 0 10px

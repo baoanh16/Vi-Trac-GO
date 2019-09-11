@@ -8,7 +8,7 @@
 	<xsl:template match="Zone">
 		<xsl:if test="position() =1">
 
-			<section class="introduce-about-us">
+			<section class="introduce-about-us" id="section-1">
 				<div class="container">
 					<div class="row">
 						<xsl:apply-templates select="News" mode="Quote"></xsl:apply-templates>
@@ -18,7 +18,7 @@
 		</xsl:if>
 		<xsl:if test="position() =2">
 
-			<section class="introduce-about-us-company">
+			<section class="introduce-about-us-company" id="section-2">
 				<div class="container">
 					<div class="article-title-yl-center-upper">
 						<p>
@@ -33,7 +33,7 @@
 		</xsl:if>
 		<xsl:if test="position() =3">
 
-			<section class="history-timeline">
+			<section class="history-timeline" id="section-3">
 				<div class="container">
 					<div class="history-title-wrapper">
 						<div class="article-title-yl-start-upper">
@@ -63,11 +63,11 @@
 		</xsl:if>
 		<xsl:if test="position() =4">
 
-			<section class="about-us-vision">
+			<section class="about-us-vision" id="section-4">
 				<div class="container">
 					<div class="article-title-yl-center-upper">
 						<p>
-							<xsl:value-of disable-output-escaping="yes" select="Tilte"></xsl:value-of>
+							<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 						</p>
 					</div>
 					<div class="row figure-wrapper">
@@ -78,7 +78,7 @@
 		</xsl:if>
 		<xsl:if test="position() =5">
 
-			<section class="structure-display">
+			<section class="structure-display" id="section-5">
 				<div class="container">
 					<div class="article-title-yl-center-upper">
 						<p>
@@ -91,7 +91,7 @@
 		</xsl:if>
 		<xsl:if test="position() = 6">
 
-			<section class="about-us-partner">
+			<section class="about-us-partner" id="section-6">
 				<div class="article-title-yl-center-upper">
 					<p>
 						<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
@@ -201,7 +201,7 @@
 		<div class="lightgallery">
 			<a>
 				<xsl:attribute name="href">
-					<xsl:value-of select="Url"></xsl:value-of>
+					<xsl:value-of select="ImageUrl"></xsl:value-of>
 				</xsl:attribute>
 				<xsl:attribute name="title">
 					<xsl:value-of select="Title"></xsl:value-of>

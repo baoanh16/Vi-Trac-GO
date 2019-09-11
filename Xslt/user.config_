@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<appSettings>
+
+    <add key="MSSQLConnectionString" value="server=WINDOWS2012-001;UID=GrandNest_3876;PWD=s32@#DFdf;database=GrandNest_3876" />
+
+    <!-- if running in medium trust uncomment this
+	<add key="RunningInMediumTrust" value="true" />
+	-->
+
+    <add key="UseLegacyCryptoHelper" value="false" />
+    <add key="CheckMD5PasswordHashAsFallback" value="false" />
+	<add key="ShowRebuildSearchIndexButtonToAdmins" value="true" />
+	
+
+    <add key="UseAppKeepAlive" value="false" />
+    <add key="AppKeepAliveUrl" value="" />
+    <add key="CombineCSS" value="false" />
+    <add key="RedirectNonWWWToWWW" value="false" />
+    <add key="DisableBannedIpBlockingModule" value="false" />
+
+    <add key="EnableContentWorkflow" value="false" />
+
+    <!--JQuery Setup-->
+    <add key="UseGoogleCDN" value="true" />
+
+    <add key="ForceSingleSessionPerUser" value="false" />
+    <add key="AllowedUploadFileExtensions" value=".gif|.jpg|.jpeg|.png|.flv|.swf|.wmv|.mp3|.mp4|.m4a|.m4v|.oga|.ogv|.webma|.webmv|.webm|.wav|.fla|.tif|.asf|.asx|.avi|.mov|.mpeg|.mpg|.zip|.pdf|.doc|.docx|.xls|.xlsx|.ppt|.pptx|.pps|.csv|.txt|.htm|.html" />
+    <add key="AudioFileExtensions" value=".wma|.mp3|.m4a|.m4a|.oga|.webma|.webm|.wav|.asf|.asx|.fla" />
+    <add key="VideoFileExtensions" value=".flv|.swf|.wmv|.mp4|.m4v|.ogv|.webmv|.webm|.avi|.mov|.mpeg|.mpg" />
+    <add key="DocumentFileExtensions" value=".doc|.txt|.docx|.xls|.xlsx|.pdf" />
+    <add key="ImageFileExtensions" value=".gif|.jpg|.jpeg|.png" />
+
+    <add key="SetMasterInLoginPage" value="false" />
+    <add key="SetMasterInChangePasswordPage" value="false" />
+    <add key="SetMasterInPasswordResetPage" value="false" />
+    <add key="SetMasterInProfilePage" value="false" />
+    <add key="SetMasterInRecoverPasswordPage" value="false" />
+    
+    <add key="UseTokensForRecoveryPassword" value="true" />
+    <!--<add key="TooManyPagesForGridEvents" value="0" />-->
+    <add key="AllowMultipleSites" value="false" />
+	<add key="GoogleCDNjQueryVersion" value="1.11.1"/>
+     <!--<add key="TwinUser" value="api.admin@khaivy.com" />
+     <add key="TwinPass" value="Canh@@Cam" />
+     <add key="ProjectId" value="103"/>
+     <add key="CdnRoot" value="http://preview3876.canhcam.com.vn"/>
+     <add key="UrlGetToken" value="http://crm.twin.vn/api/landingpagecontent/login"/>
+     <add key="UrlAddEditProject" value="http://crm.twin.vn/api/landingpagecontent/landingpagecontent/project"/>
+     <add key="UrlCreateProjectInfo" value="http://crm.twin.vn/api/landingpagecontent/projectInfo"/>
+     <add key="UrlCreateGallery" value="http://crm.twin.vn/api/landingpagecontent/projectGallery"/>
+     <add key="UrlCreateArticle" value="http://crm.twin.vn/api/landingpagecontent/article"/>-->
+  <add key="TwinUser" value="nlminhdieu" />
+  <add key="TwinPass" value="nlminhdieu@123" />
+  <add key="ProjectId" value="120"/>
+  <add key="CdnRoot" value="http://preview3876.canhcam.com.vn"/>
+  <add key="UrlGetToken" value="http://crm.twin.vn/api/landingpagecontent/login"/>
+  <add key="UrlAddEditProject" value="http://crm.twin.vn/api/landingpagecontent/landingpagecontent/project"/>
+  <add key="UrlCreateProjectInfo" value="http://crm.twin.vn/api/landingpagecontent/projectInfo"/>
+  <add key="UrlCreateGallery" value="http://crm.twin.vn/api/landingpagecontent/projectGallery"/>
+  <add key="UrlCreateArticle" value="http://crm.twin.vn/api/landingpagecontent/article"/>
+  <add key="UrlCreaateProject" value="http://crm.twin.vn/api/landingpagecontent/project"/>
+  <add key="UrlApartmentDesign" value="http://crm.twin.vn/api/landingpagecontent/apartmentDesign"/>
+  <add key="UrlCreateBlock"    value="http://crm.twin.vn/api/landingpagecontent/projectBlock"/>
+  <add key="UrlCreaateApartment" value="http://crm.twin.vn/api/landingpagecontent/apartment"/>
+  <add key="UrlGalleryAPI" value="http://crm.twin.vn/api/landingpagecontent/projectGallery"/>
+  <add key="UrlSubcribeAPI" value="http://crm.twin.vn/api/landingpagecontent/subcribe"/>
+  <add key="NewsLetterDomain" value="http://preview3876.canhcam.com.vn"/>
+
+  <add key="UseAjaxFormActionUpdateScript" value="true" />
+</appSettings>

@@ -3,12 +3,16 @@
 	background-repeat: no-repeat
 	background-position: center
 	padding-bottom: 50px
+	@media screen and(max-width:1025px)
+		padding-bottom: 30px
 	.about-us-partner-wrapper
 		margin: 30px 0 50px 0
 		position: relative
 		padding: 2px
 		@media screen and(max-width:1025px)
 			margin: 20px 0 40px 0
+		@media screen and(max-width:576px)
+			padding: 0 15px
 		.partner-navigation-prev,.partner-navigation-next
 			position: absolute
 			top: 50%
@@ -23,9 +27,12 @@
 				font-size: 20px
 		.partner-navigation-prev
 			left: -20px
+			@media screen and(max-width:576px)
+				left: -10px
 		.partner-navigation-next
 			right: -20px
-
+			@media screen and(max-width:576px)
+				right: -10px
 		.swiper-container
 			padding: 2px
 		.swiper-slide

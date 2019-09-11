@@ -9,6 +9,7 @@
 	"js": [
 		"bower_components/jquery/dist/jquery.min.js",
 		"src/plugins/mapping.js",
+		"src/plugins/medium-zoom.js",
 		"src/plugins/mapping-listener.js",
 		"bower_components/swiper/dist/js/swiper.min.js",
 		"bower_components/plyr/dist/plyr.min.js",
@@ -18,16 +19,19 @@
 		"bower_components/fancybox/dist/medium-zoom.js",
 		"bower_components/lightgallery/dist/js/lightgallery-all.js",
 		"bower_components/lightgallery/modules/*",
-		"bower_components/lightgallery/lib/picturefill.min.js"
+		"bower_components/lightgallery/lib/picturefill.min.js",
+		"bower_components/fancybox/dist/jquery.fancybox.js"
 	],
 	"css": [
 		"src/plugins/addon.css",
 		"src/plugins/font.css",
 		"src/plugins/grid.css",
+		"src/plugins/dk.css",
 		"bower_components/swiper/dist/css/swiper.min.css",
 		"bower_components/plyr/dist/plyr.css",
 		"bower_components/jquery-toast-plugin/dist/jquery.toast.min.css",
 		"bower_components/jssocials/dist/jssocials-theme-flat.css",
-		"bower_components/lightgallery/dist/css/lightgallery.css"
+		"bower_components/lightgallery/dist/css/lightgallery.css",
+		"bower_components/fancybox/dist/jquery.fancybox.css"
 	]
 }

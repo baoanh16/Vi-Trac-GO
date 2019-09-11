@@ -30,9 +30,7 @@
 	</xsl:template>
 	<xsl:template match="News">
 		<tr>
-			<th>
-				<xsl:value-of disable-output-escaping="yes" select="SubTitle"></xsl:value-of>
-			</th>
+			<th></th>
 			<td attribute="Chức vụ">
 				<a>
 					<xsl:attribute name="href">

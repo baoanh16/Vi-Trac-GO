@@ -84,10 +84,11 @@
 	.product-child-mobile-toggle
 		display: none
 	.product-status-tab
+		white-space: nowrap
+		overflow: auto
 		@media screen and(max-width:576px)
-			.product-status-tab-item
-				&:not(:last-child)
-					margin-bottom: 20px !important
+			flex-wrap: unset !important
+			justify-content: flex-start !important
 	.product-child-tab
 		.product-child-tab-item
 			flex: 0 0 calc(8.33% - 20px)
@@ -114,11 +115,20 @@
 				background: #41535d
 				color: #fff
 		.product-child-tab-item
-			padding: 10px 5px
+			padding: 0
 			font-size: 13px
 			font-weight: 400
 			margin-bottom: 10px
 			text-align: center
+			span
+				display: block
+				background: #41535d
+				padding: 5px
+				width: 100%
+				color: #fff
+				text-align: center
+				@media screen and(max-width:1025px)
+					display: none
 			img
 				transition: .4s ease-in-out all
 			figure
@@ -138,7 +148,7 @@
 				justify-content: flex-start
 				align-items: center
 				flex-direction: column
-				padding: 10px 0
+				padding: 10px 5px
 				@media screen and(max-width:768px)
 					min-height: 100%
 				figcaption
@@ -166,11 +176,12 @@
 		box-shadow: 0 0 5px rgba(#000,.3)
 		figure
 			.image
-				padding: 20px
+				height: 100% !important
 				display: flex
 				justify-content: center
 				align-items: center
 				position: relative
+	
 				.promotion
 					background: #ffaa00
 					color: #ffffff
@@ -193,6 +204,8 @@
 					text-transform: uppercase
 					font-weight: 400
 					color: #999
+					&:hover
+						color: #fff
 				h5
 					font-size: 15px
 					font-weight: 600
@@ -201,14 +214,14 @@
 			&:hover
 				figcaption
 					background: #ffaa00
-					h4
-						color: #fff
+
+				
 	@media(max-width: 1200px)
 		.product-child-tab
 			flex-wrap: wrap
 		.product-child-tab-item
 			flex: 0 0 calc(16.666667% - 20px)
-	@media(min-width: 768px)
+	@media(min-width: 1025px)
 		.product-child-tab
 			display: flex!important
 	@media(max-width: 768px)
@@ -245,6 +258,8 @@
 		text-align: left
 		max-width: 420px
 		text-transform: initial
+		@media screen and(max-width:576px)
+			margin-bottom: 30px
 	figure
 		color: #fff
 		.image
@@ -267,6 +282,18 @@
 				position: absolute
 				top: 0
 				right: 0
+	@media screen and(max-width:1200px)
+		figure
+			figcaption
+				p
+					font-size: 20px
+	@media screen and(max-width:1025px)
+		figure
+			margin-bottom: 30px
+			figcaption
+				height: 90px !important
+				padding: 20px 0 0 0
+				p
 	@media(min-width: 1025px)
 		padding: 90px 0
 		.vt-title
@@ -274,6 +301,7 @@
 		figure
 			figcaption
 				font-size: 24px
+				padding: 20px 0
 			&:hover
 				figcaption
 					color: #ffaa00

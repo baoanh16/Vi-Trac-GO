@@ -27,9 +27,16 @@
 	<xsl:template match="Zone" mode="Zone2">
 		<xsl:if test="IsActive = 'true'">
 			<div class="brand-technology-title-upper">
-				<h2>
-					<xsl:value-of select="Title"></xsl:value-of>
-				</h2>
+				<div class="brand-image-logo">
+					<img>
+						<xsl:attribute name="src">
+							<xsl:value-of select="ImageUrl"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
+					</img>
+				</div>
 			</div>
 			<div class="brand-navigation">
 				<ul>
